@@ -1,0 +1,33 @@
+9654(2023.07.23)
+ receive_pending 기능 삭제
+ - 사용 빈도가 매우 낮고 오동작의 가능성도 존재.
+ - receive_io_pending 관련 변수와 함수를 제거함.
+
+ windows io처리시 buffer_view에서 WSABUF로 변경 
+ - 호환성을 위해 
+ - buffer_view를 overlapped i/o의 WSABUF 대신 사용함으로써 data_ size_dml의 순서가 표준과 반대인 상황이 발생해 이럴 표준과 일치시키기 위해 사전 변경 (다만 buffer_view의 data_와 size_의 위치는 변경하지 않음)
+
+ windows의 /system project에서 컴파일시 vcpkg 설정 추가
+ - openssl 패키지를 vcpkg로 포함하도록 함.
+ - unittest용 project에 gperftools와 gtest 패키지를 vcpkg로 포함하도록 함.
+
+ process_sendable 중 own을 r-value로 전달함으로써 불필요한 referecen counting을 줄임.
+ sendable읠 전송 과정 최적화 
+  - sync_bufferd, async_sync, async, async_gather, async_gather_buffer의 처리 과정을 최적화.
+  - 고성능을 위해 날포인터(raw-pointer)를 std::vector를 사용함.
+ 
+9654(2023.07.26)
+executor post 함수 변경
+- executor의 post 함수를 SFINAE 사용한 것에서 make_executable함수로 executable 객체를 생성해 요청하는 형식으로 변경
+
+executro strand 추가
+- lock과 wait없는 비동기 처리를 위해 strand클래스의 추가
+
+9719(2023.07.31)
+tls pool의 garbage collection 처리 변경
+- 보다 빈번하게 tls pool의 garbage collection을 처리하도록 수정.
+- thread가 idle일 경우 thread별로 garbage collection처리하도록 변경.
+- tls garbage를 빨리 정리해 사용 메모리 대폭 감소. 
+
+2023.9.10
+- 구조체를 이용한 query의 get_value 기능 추가.

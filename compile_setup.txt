@@ -1,0 +1,35 @@
+1. install openssl
+sudo apt install libssl-dev openssl
+
+2. install c++ build
+sudo apt install build-essential
+sudo apt install cmake
+
+3. install odbc & mysql-odbc
+sudo apt install unixodbc unixodbc-dev unixodbc-bin
+
+4. install mysql connector
+X sudo apt install libmyodbc
+
+
+
+
+
+
+* install mariadb
+sudo apt install mariadb-server
+sudo apt install mariadb-client
+
+sudo mysql_secure_installation
+-> set mysql root password
+-> remove anonymouss => y
+-> Disallow root login remotely> => n
+-> Remove test database and access to it =>y/n
+-> Reload privilege tables now? => y
+
+
+connect test
+-> sudo mysql -u root -p
+-> show databases;
+-> select version();
+
