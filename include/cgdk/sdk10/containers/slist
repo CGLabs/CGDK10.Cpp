@@ -1,0 +1,70 @@
+//*****************************************************************************
+//*                                                                           *
+//*                      Cho sanghyun's Game Classes II                       *
+//*                       Ver 6.1 / Release 2012.05.28                        *
+//*                                                                           *
+//*                           Data Template Classes                           *
+//*                                                                           *
+//*                                                                           *
+//*                                                                           *
+//*                                                                           *
+//*  This Program is programmed by Cho SangHyun. sangducks@gmail.com          *
+//*  Best for Game Developement and Optimized for Game Developement.          *
+//*                                                                           *
+//*                   (C) 2008 CGLabs All right reserved.                     *
+//*                           http://www.CGDK.co.kr                           *
+//*                                                                           *
+//*****************************************************************************
+
+#pragma once
+//-----------------------------------------------------------------------------
+//
+// CGDK::slist<T>
+//
+// 1. CGDK::slist란!
+//     next에 대한 포인터만 가진 단방향 linked list이다.
+//    단방향 linked list라 push_front와 pop_front만 가능하다.
+//     slist인만큼 추가삭제시 성능이 뛰어나다.
+//
+// 2. CGDK::array의 표준 준수 사항
+//    1) (x) Common Container Standard 
+//    2) (x) Reversible Standard 
+//    3) (x) Sequence Container Standard 
+//    4) (x) Assosiative Container Standard 
+//
+//    (*) slist는 기본적으로 stl의 기본 container가 아니다.
+//
+//
+// 3. exception-safe level.
+//    1) Strong guarantee.
+//       - 아무런 Option이 주어지지 않으면 기본적으로 strong exception safe
+//         guarantee를 제공해준다.
+//      -  걱 Operation을 수행할 때 exception safe확보를 위한 if문장들이 추가
+//         된다.
+//
+//    2) No guarantee (With _CGD_NO_EXCEPTION_GUARANTEE flag)
+//       - flag를 설정하면 No Execption safe guarantee를 제공해줄수 있다.
+//       - 추가적으로 exception처리를 하지 않거나 혹은 안정성보다 빠른 속도를
+//         원할 경우 Exception Guarantee를 제거할 경우 안전을 위한 추가적인
+//         if문들이 제거되어 조금 더 빠른 code를 제공해 줄수 있다.
+//       - 이를 통해 inline처리되는 확률이 늘어나는 것이 속도향상의 핵심이다.
+//
+//
+// 4. Option) CGDK::array의 주요 옵션.
+// 
+//	  1) 없음...
+//
+// *주의: 이런 주석문들은 comiler에게 쓸모없는 부하를 줄수 있습니다. 따라서...
+//        컴파일 시간이 느리면 이런 주석들을 모조리 지워주시기 바랍니다.
+//
+//
+//-----------------------------------------------------------------------------
+// 1) Definition
+#include "cgdk/sdk10/containers/_definitions.h"
+
+// 2) CGDK Allocator
+#include "cgdk/sdk10/containers/_allocator.h"
+#include "cgdk/sdk10/containers/_allocator_pool.h"
+
+// 3) Container
+#include "cgdk/sdk10/containers/_slist.h"

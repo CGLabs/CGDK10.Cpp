@@ -1,0 +1,33 @@
+//*****************************************************************************
+//*                                                                           *
+//*                      Cho sanghyun's Game Classes II                       *
+//*                       Ver 6.1 / Release 2012.05.28                        *
+//*                                                                           *
+//*                           Data Template Classes                           *
+//*                                                                           *
+//*                                                                           *
+//*                                                                           *
+//*                                                                           *
+//*  This Program is programmed by Cho SangHyun. sangducks@gmail.com          *
+//*  Best for Game Developement and Optimized for Game Developement.          *
+//*                                                                           *
+//*                   (C) 2008 CGLabs All right reserved.                     *
+//*                           http://www.CGDK.co.kr                           *
+//*                                                                           *
+//*****************************************************************************
+
+#pragma once
+//-----------------------------------------------------------------------------
+//
+// CGDK::fast_vector<T>
+//
+//-----------------------------------------------------------------------------
+// 1) definition
+#include "cgdk/sdk10/containers/_definitions.h"
+
+// 2) allocator
+#include "cgdk/sdk10/containers/_allocator.h"
+#include "cgdk/sdk10/containers/_allocator_pool.h"
+
+// 3) container
+#include "cgdk/sdk10/containers/_fast_vector.h"

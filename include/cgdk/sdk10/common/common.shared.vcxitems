@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{cb1ac3a7-19d0-4c1b-80a8-825abc3bdeb0}</ItemsProjectGuid>
+    <ItemsProjectName>CGDK10.common.shared</ItemsProjectName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\common.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definition.lock.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definition.string.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definition.timer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definitions.assert.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definitions.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definitions.message.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definitions.system.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definitions.types.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)lockable.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)locked_identity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)locked_self_stack.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)lockfree_self_stack.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)lockfree_self_stack_64.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)message_map.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)scoped_lock.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)string_functions.android.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)string_functions.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)string_functions.ios.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)string_functions.linux.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)string_functions.windows.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)read_me.txt" />
+  </ItemGroup>
+</Project>
