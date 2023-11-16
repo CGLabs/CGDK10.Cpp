@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31717.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{436DACE3-5CC8-4C4E-8758-E933E5CB3F57}"
+	ProjectSection(SolutionItems) = preProject
+		read_me.txt = read_me.txt
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tut.common.01.object_pointer", "object.01.pointer\tutorial.common.object_pointer.windows.vs17.vcxproj", "{C79DCCC0-D7C6-4016-8FA3-289E76A23B39}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tut.common.02.contexts", "object.02.contexts\tutorial.common.contexts.windows.vs17.vcxproj", "{DAFAC522-84FA-4073-9716-5DE8AC520066}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tut.common.03.object_interfaces.1", "object.03.object_interfaces.1\tutorial.common.object_interfaces.1.windows.vs17.vcxproj", "{E942D82B-6CF5-458E-A636-8CF4F0C98289}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tut.common.04.object_interfaces.2", "object.04.object_interfaces.2\tutorial.common.object_interfaces.2.windows.vs17.vcxproj", "{1A2CF48D-2568-4353-8D0D-085C99FBBF6B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tut.common.05.object_interfaces.3", "object.05.object_interfaces.3\tutorial.common.object_interfaces.3.windows.vs17.vcxproj", "{EBC97364-6E69-42D9-B841-420972428E2C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tut.common.ex01.file_io", "object.ex01.file_io\tutorial.common.ex.file_io.windows.vs17.vcxproj", "{509F281D-217B-4F71-A698-7C832080C986}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tut.common.ex02.endcoding_decoding", "object.ex02.endcoding_decoding\tutorial.common.ex.endcoding_decoding.windows.vs17.vcxproj", "{837F13AA-4BF0-4D7A-A032-11EE36822941}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tut.common.ex03.license_info.console", "object.ex03.license_info.console\tutorial.common.ex.license_info.console.vs17.vcxproj", "{B779513B-EC08-4CF0-A4C8-B04FB553F249}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tut.common.ex03.license_info.mfc", "object.ex03.license_info.mfc\tutorial.common.ex.license_info.mfc.vs17.vcxproj", "{437F8014-E411-411B-A26D-908A92C634AF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tutorial.common.ex04.memory_leak", "object.ex04.memory_leak\tutorial.common.ex04.memory_leak.vs17.vcxproj", "{9DCDC11D-F716-4BE8-B14A-8C37DE49EC66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C79DCCC0-D7C6-4016-8FA3-289E76A23B39}.Debug|x64.ActiveCfg = Debug|x64
+		{C79DCCC0-D7C6-4016-8FA3-289E76A23B39}.Debug|x64.Build.0 = Debug|x64
+		{C79DCCC0-D7C6-4016-8FA3-289E76A23B39}.Release|x64.ActiveCfg = Release|x64
+		{C79DCCC0-D7C6-4016-8FA3-289E76A23B39}.Release|x64.Build.0 = Release|x64
+		{DAFAC522-84FA-4073-9716-5DE8AC520066}.Debug|x64.ActiveCfg = Debug|x64
+		{DAFAC522-84FA-4073-9716-5DE8AC520066}.Debug|x64.Build.0 = Debug|x64
+		{DAFAC522-84FA-4073-9716-5DE8AC520066}.Release|x64.ActiveCfg = Release|x64
+		{DAFAC522-84FA-4073-9716-5DE8AC520066}.Release|x64.Build.0 = Release|x64
+		{E942D82B-6CF5-458E-A636-8CF4F0C98289}.Debug|x64.ActiveCfg = Debug|x64
+		{E942D82B-6CF5-458E-A636-8CF4F0C98289}.Debug|x64.Build.0 = Debug|x64
+		{E942D82B-6CF5-458E-A636-8CF4F0C98289}.Release|x64.ActiveCfg = Release|x64
+		{E942D82B-6CF5-458E-A636-8CF4F0C98289}.Release|x64.Build.0 = Release|x64
+		{1A2CF48D-2568-4353-8D0D-085C99FBBF6B}.Debug|x64.ActiveCfg = Debug|x64
+		{1A2CF48D-2568-4353-8D0D-085C99FBBF6B}.Debug|x64.Build.0 = Debug|x64
+		{1A2CF48D-2568-4353-8D0D-085C99FBBF6B}.Release|x64.ActiveCfg = Release|x64
+		{1A2CF48D-2568-4353-8D0D-085C99FBBF6B}.Release|x64.Build.0 = Release|x64
+		{EBC97364-6E69-42D9-B841-420972428E2C}.Debug|x64.ActiveCfg = Debug|x64
+		{EBC97364-6E69-42D9-B841-420972428E2C}.Debug|x64.Build.0 = Debug|x64
+		{EBC97364-6E69-42D9-B841-420972428E2C}.Release|x64.ActiveCfg = Release|x64
+		{EBC97364-6E69-42D9-B841-420972428E2C}.Release|x64.Build.0 = Release|x64
+		{509F281D-217B-4F71-A698-7C832080C986}.Debug|x64.ActiveCfg = Debug|x64
+		{509F281D-217B-4F71-A698-7C832080C986}.Debug|x64.Build.0 = Debug|x64
+		{509F281D-217B-4F71-A698-7C832080C986}.Release|x64.ActiveCfg = Release|x64
+		{509F281D-217B-4F71-A698-7C832080C986}.Release|x64.Build.0 = Release|x64
+		{837F13AA-4BF0-4D7A-A032-11EE36822941}.Debug|x64.ActiveCfg = Debug|x64
+		{837F13AA-4BF0-4D7A-A032-11EE36822941}.Debug|x64.Build.0 = Debug|x64
+		{837F13AA-4BF0-4D7A-A032-11EE36822941}.Release|x64.ActiveCfg = Release|x64
+		{837F13AA-4BF0-4D7A-A032-11EE36822941}.Release|x64.Build.0 = Release|x64
+		{B779513B-EC08-4CF0-A4C8-B04FB553F249}.Debug|x64.ActiveCfg = Debug|x64
+		{B779513B-EC08-4CF0-A4C8-B04FB553F249}.Debug|x64.Build.0 = Debug|x64
+		{B779513B-EC08-4CF0-A4C8-B04FB553F249}.Release|x64.ActiveCfg = Release|x64
+		{B779513B-EC08-4CF0-A4C8-B04FB553F249}.Release|x64.Build.0 = Release|x64
+		{437F8014-E411-411B-A26D-908A92C634AF}.Debug|x64.ActiveCfg = Debug|x64
+		{437F8014-E411-411B-A26D-908A92C634AF}.Debug|x64.Build.0 = Debug|x64
+		{437F8014-E411-411B-A26D-908A92C634AF}.Release|x64.ActiveCfg = Release|x64
+		{437F8014-E411-411B-A26D-908A92C634AF}.Release|x64.Build.0 = Release|x64
+		{9DCDC11D-F716-4BE8-B14A-8C37DE49EC66}.Debug|x64.ActiveCfg = Debug|x64
+		{9DCDC11D-F716-4BE8-B14A-8C37DE49EC66}.Debug|x64.Build.0 = Debug|x64
+		{9DCDC11D-F716-4BE8-B14A-8C37DE49EC66}.Release|x64.ActiveCfg = Release|x64
+		{9DCDC11D-F716-4BE8-B14A-8C37DE49EC66}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {334868F5-F1A9-4E38-B5E6-E86C6651FD34}
+	EndGlobalSection
+EndGlobal

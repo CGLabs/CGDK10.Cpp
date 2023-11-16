@@ -1,0 +1,12 @@
+{
+  "acceptorUser": {
+    "Port": 20000
+  },
+  "repositoryAccount": {
+    "Address": "127.0.0.1:16123"
+  },
+  "accountServerSocket": {
+    "IP": "127.0.0.1",
+    "PORT": 17000
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "MainAcceptor": {
+    "Port": 20003
+  },
+
+  "UserAcceptor": {
+    "Port": 20023,
+    "AcceptPrepareOnStart": 1000,
+    "AcceptMustPrepare": 100
+  },
+
+  "connectorUser": {
+    "Address": "127.0.0.1",
+    "Port": 20032
+  },
+
+  "Servers": {
+    "connectorUser1": {
+      "Address": "127.0.0.1",
+      "Port": 20034
+    },
+    "connectorUser2": {
+      "Address": "127.0.0.1",
+      "Port": 20035
+    },
+    "connectorUser3": {
+      "Address": "127.0.0.1",
+      "Port": 20036
+    }
+  }
+}

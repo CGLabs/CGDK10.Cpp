@@ -1,0 +1,22 @@
+{
+  "connection_list": {
+    "socket.1": {
+      "remote_endpoint": {
+        "address": "127.0.0.1",
+        "port": 20000
+      }
+    },
+    "socket.2": {
+      "remote_endpoint": {
+        "address": "127.0.0.1",
+        "port": 20000
+      }
+    },
+    "socket.3": {
+      "remote_endpoint": {
+        "address": "127.0.0.1",
+        "port": 20010
+      }
+    }
+  }
+}
