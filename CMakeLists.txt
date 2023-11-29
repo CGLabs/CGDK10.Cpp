@@ -36,11 +36,8 @@ CMAKE_MINIMUM_REQUIRED ( VERSION 3.10 )
 #-----------------------------------------------------------------------------
 # Compile
 #-----------------------------------------------------------------------------
-# 1) system
-ADD_SUBDIRECTORY (build)
-
-# 2) tutorial
+# 1) tutorial
 ADD_SUBDIRECTORY (tutorials)
 
-# 3) example
+# 2) example
 ADD_SUBDIRECTORY (examples)

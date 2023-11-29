@@ -32,4 +32,3 @@ connect test
 -> sudo mysql -u root -p
 -> show databases;
 -> select version();
-
