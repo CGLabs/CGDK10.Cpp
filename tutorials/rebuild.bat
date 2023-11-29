@@ -1,2 +1,4 @@
 @ECHO OFF
-call rebuild.windows.vs16.bat
+call _build.windows.vs17 Debug x64 rebuild
+call _build.windows.vs17 Release x64 rebuild
+pause

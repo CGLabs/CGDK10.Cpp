@@ -1,2 +1,4 @@
 @ECHO OFF
-call build.windows.vs16.bat
+call _build.windows.vs17 Debug x64 build
+call _build.windows.vs17 Release x64 build
+pause
