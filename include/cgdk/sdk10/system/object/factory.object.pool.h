@@ -129,7 +129,7 @@ private:
 								process_create_object(CGNEW_DEBUG_INFO_PARAMETERS)
 	{
 		// 1) call 'create_object'
-		auto pobject = this->create_object(CGNEW_DEBUG_INFO_PARAMETERS_PASSING);	// (여기서 Exception발생 가능.)
+		auto pobject = this->create_object(CGNEW_DEBUG_INFO_PARAMETERS_PASSING);
 
 		// 2) increase reference count (m_ppool에 setting하지 않으면 자체적으로 증가시킨다.)
 		this->add_ref();

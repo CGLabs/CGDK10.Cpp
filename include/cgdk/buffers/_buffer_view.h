@@ -53,7 +53,7 @@ public:
 	template <class T, size_t N>
 	constexpr _buffer_view(std::array<T, N>& _array) noexcept : base_t{ N * sizeof(T), reinterpret_cast<element_t*>(_array.data()) } {}
 	template <class T>
-	constexpr _buffer_view(std::basic_string_view<T> _string) noexcept : base_t{ _string.size() * sizeof(T), reinterpret_cast<element_t*>(_string.data()) } {}
+	constexpr _buffer_view(std::basic_string_view<T> _string) noexcept : base_t{ _string.size() * sizeof(T), reinterpret_cast<element_t*>(const_cast<T*>(_string.data())) } {}
 
 // public) 
 public:

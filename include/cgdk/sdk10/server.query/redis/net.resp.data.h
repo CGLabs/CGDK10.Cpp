@@ -50,7 +50,7 @@ public:
 	[[nodiscard]] auto			end() const noexcept { return vector_child.end();}
 			void				reset() noexcept { type = eRESP_DATA_TYPE::NONE_; str_value = std::string_view(); buf_store.clear(); vector_child.clear(); pos_processing = 0;}
 	[[nodiscard]] std::size_t	size() const noexcept { return vector_child.size();}
-	[[nodiscard]] std::size_t	size_bytes() const noexcept;
+	[[nodiscard]] std::size_t	size_bytes() const noexcept { auto bytes_size = buf_store.size(); for (auto& iter : vector_child) bytes_size += iter.size_bytes(); return bytes_size; }
 
 	[[nodiscard]] bool			is_success() const noexcept { return type != eRESP_DATA_TYPE::ERROR_;}
 	[[nodiscard]] bool			is_failed() const noexcept { return type == eRESP_DATA_TYPE::ERROR_;}

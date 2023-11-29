@@ -34,8 +34,6 @@ namespace CGDK
 class CGMFCCONTROL_EXT_CLASS CDialog_CGDK_component_info : public CDialogEx
 {
 	DECLARE_DYNAMIC(CDialog_CGDK_component_info)
-
-// constructor/destructor)
 public:
 			CDialog_CGDK_component_info(CWnd* pnode_parent = nullptr);
 			CDialog_CGDK_component_info(const std::vector<CGDK::sCOMPONENT_LICENSE>& _vector_components, CWnd* pnode_parent = nullptr);
@@ -45,21 +43,16 @@ public:
 	enum { IDD = IDD_DIALOG_CGDK_VERSION_INFO };
 #endif
 
-// MFC) Virtual Functions
-protected:
-	virtual void				DoDataExchange(CDataExchange* pDX);    // DDX/DDV 지원입니다.
-	virtual BOOL				OnInitDialog();
-
-// public) 
-public:
 			BOOL				CreateModaless(const std::vector<CGDK::sCOMPONENT_LICENSE>& _vector_components, CWnd* _pparent=nullptr);
 			void				EnableControl(BOOL _enable=TRUE);
 			void				SetComponentInfo(const std::vector<CGDK::sCOMPONENT_LICENSE>& _vector_components) noexcept { m_pvector_components = &_vector_components; }
 
-	DECLARE_MESSAGE_MAP()
 
-// implementation) 
 protected:
+	DECLARE_MESSAGE_MAP()
+	virtual void				DoDataExchange(CDataExchange* pDX) override;
+	virtual BOOL				OnInitDialog() override;
+
 			const std::vector<CGDK::sCOMPONENT_LICENSE>* m_pvector_components;
 
 			CListCtrl			m_listctrl_components;

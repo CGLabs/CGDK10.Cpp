@@ -22,13 +22,13 @@ devenv 1.3.tcp_multicast_echo\CGDK10.tcp_multicast_echo.server.vs17.sln /%3 "%1|
 devenv 1.3.tcp_multicast_echo\CGDK10.tcp_multicast_echo.client.vs17.sln /%3 "%1|%2"
 devenv 2.1.chatting_simple\CGDK10.chatting.server.vs17.sln /%3 "%1|%2"
 devenv 2.1.chatting_simple\CGDK10.chatting.client.vs17.sln /%3 "%1|%2"
-devenv 2.2.chatting_scaleout\CGDK10.chatting.server.channel_manager.vs17.sln /%3 "%1|%2"
-devenv 2.2.chatting_scaleout\CGDK10.chatting.server.channel.vs17.sln /%3 "%1|%2"
-devenv 2.2.chatting_scaleout\CGDK10.chatting.client.vs17.sln /%3 "%1|%2"
-devenv 6.1.game_mmo_field_1\CGDK10.game_mmo_field.server.vs17.sln /%3 "%1|%2"
-devenv 6.1.game_mmo_field_1\CGDK10.game_mmo_field.client.vs17.sln /%3 "%1|%2"
-devenv 7.1.update_service\CGDK10.update_service.server.vs17.sln /%3 "%1|%2"
-devenv 7.1.update_service\CGDK10.update_service.client.vs17.sln /%3 "%1|%2"
+REM devenv 2.2.chatting_scaleout\CGDK10.chatting.server.channel_manager.vs17.sln /%3 "%1|%2"
+REM devenv 2.2.chatting_scaleout\CGDK10.chatting.server.channel.vs17.sln /%3 "%1|%2"
+REM devenv 2.2.chatting_scaleout\CGDK10.chatting.client.vs17.sln /%3 "%1|%2"
+REM devenv 6.1.game_mmo_field_1\CGDK10.game_mmo_field.server.vs17.sln /%3 "%1|%2"
+REM devenv 6.1.game_mmo_field_1\CGDK10.game_mmo_field.client.vs17.sln /%3 "%1|%2"
+REM devenv 7.1.update_service\CGDK10.update_service.server.vs17.sln /%3 "%1|%2"
+REM devenv 7.1.update_service\CGDK10.update_service.client.vs17.sln /%3 "%1|%2"
 
 
 

@@ -37,8 +37,3 @@ CMAKE_POLICY( VERSION 3.20 )
 #-----------------------------------------------------------------------------
 # compile
 #-----------------------------------------------------------------------------
-# 1) client
-ADD_SUBDIRECTORY (client.console)
-
-# 2) server
-ADD_SUBDIRECTORY (server)
