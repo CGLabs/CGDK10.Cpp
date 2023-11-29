@@ -20,7 +20,7 @@
 # setting
 #-----------------------------------------------------------------------------
 # 1) project name
-PROJECT ( "CGDK10.example" )
+PROJECT ( "CGDK10.example.chatting_simple.server" )
 
 # 2) project version
 SET ( PROJECT_VERSION_MAJOR 10 )
@@ -37,39 +37,5 @@ CMAKE_POLICY( VERSION 3.20 )
 #-----------------------------------------------------------------------------
 # compile
 #-----------------------------------------------------------------------------
-# 1) tcp_echo
-ADD_SUBDIRECTORY (1.1.tcp_echo)
-ADD_SUBDIRECTORY (1.2.tcp_relay_echo)
-ADD_SUBDIRECTORY (1.3.tcp_multicast_echo)
-
-# 2) 1.chatting_simple
-ADD_SUBDIRECTORY (2.1.chatting_simple)
-#ADD_SUBDIRECTORY (2.2.chatting_scaleout)
-#ADD_SUBDIRECTORY (2.3.chatting)
-
-# 3) channel_system
-#ADD_SUBDIRECTORY (3.1.channel_system_1)
-#ADD_SUBDIRECTORY (3.2.channel_system_2)
-
-# 4) game_simple_server
-#ADD_SUBDIRECTORY (4.1.game_simple_server_1)
-#ADD_SUBDIRECTORY (4.2.game_simple_server_2)
-#ADD_SUBDIRECTORY (4.3.game_login_system)
-#ADD_SUBDIRECTORY (4.4.game_scalable_server_system)
-
-# 5) game_server_system
-#ADD_SUBDIRECTORY (5.1.game_match_making_server_system)
-#ADD_SUBDIRECTORY (5.2.game_friend_system)
-#ADD_SUBDIRECTORY (5.3.game_mail_system_1)
-#ADD_SUBDIRECTORY (5.6.game_shop_system)
-
-# 6) game_mmo_field_system
-#ADD_SUBDIRECTORY (6.1.game_mmo_field_1)
-#ADD_SUBDIRECTORY (6.2.game_mmo_field_2)
-#ADD_SUBDIRECTORY (6.3.game_quest_system)
-#ADD_SUBDIRECTORY (6.4.game_instance_dungeon)
-#ADD_SUBDIRECTORY (6.5.game_trade_server_system)
-
-# 7) update_service
-#ADD_SUBDIRECTORY (7.1.update_service)
-
+# 1) chatting_client
+ADD_SUBDIRECTORY (console)

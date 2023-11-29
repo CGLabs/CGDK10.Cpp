@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="channel">
+      <UniqueIdentifier>{e2753672-d07c-4478-b9de-3ba9599d3b20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user">
+      <UniqueIdentifier>{629c369f-eb3f-479a-a5fe-39c493ba70b6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)channel_group_chatting.cpp">
+      <Filter>channel</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)channel_group_waiting.cpp">
+      <Filter>channel</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)user_group_immigration.cpp">
+      <Filter>user</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)user_manager.cpp">
+      <Filter>user</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)user_socket.cpp">
+      <Filter>user</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)channel_manager.cpp">
+      <Filter>channel</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)include.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)service.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)channel_Igroup.h">
+      <Filter>channel</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)channel_group_chatting.h">
+      <Filter>channel</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)channel_group_waiting.h">
+      <Filter>channel</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)user_socket.h">
+      <Filter>user</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)user_group_immigration.h">
+      <Filter>user</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)user_manager.h">
+      <Filter>user</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)channel_manager.h">
+      <Filter>channel</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)service.h" />
+  </ItemGroup>
+</Project>
