@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33712.159
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CGDK10.update_service.server.shared", "server\shared\CGDK10.update_service.server.shared.vcxitems", "{E80DA72E-0562-436F-806D-A0A0DCD5B369}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CGDK10.update_service.server", "server\console\CGDK10.update_service.server.console.vs17.vcxproj", "{DD2B0CAE-895D-43B5-9D3B-06E11A71CF8A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CGDK10.update_service.server.mfc", "server\mfc\CGDK10.update_service.server.mfc.vs17.vcxproj", "{9DA689EC-18EF-4DCA-A8A1-EF1E7CB5656E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD2B0CAE-895D-43B5-9D3B-06E11A71CF8A}.Debug|x64.ActiveCfg = Debug|x64
+		{DD2B0CAE-895D-43B5-9D3B-06E11A71CF8A}.Debug|x64.Build.0 = Debug|x64
+		{DD2B0CAE-895D-43B5-9D3B-06E11A71CF8A}.Debug|x86.ActiveCfg = Debug|x64
+		{DD2B0CAE-895D-43B5-9D3B-06E11A71CF8A}.Debug|x86.Build.0 = Debug|x64
+		{DD2B0CAE-895D-43B5-9D3B-06E11A71CF8A}.Release|x64.ActiveCfg = Release|x64
+		{DD2B0CAE-895D-43B5-9D3B-06E11A71CF8A}.Release|x64.Build.0 = Release|x64
+		{DD2B0CAE-895D-43B5-9D3B-06E11A71CF8A}.Release|x86.ActiveCfg = Release|x64
+		{DD2B0CAE-895D-43B5-9D3B-06E11A71CF8A}.Release|x86.Build.0 = Release|x64
+		{9DA689EC-18EF-4DCA-A8A1-EF1E7CB5656E}.Debug|x64.ActiveCfg = Debug|x64
+		{9DA689EC-18EF-4DCA-A8A1-EF1E7CB5656E}.Debug|x64.Build.0 = Debug|x64
+		{9DA689EC-18EF-4DCA-A8A1-EF1E7CB5656E}.Debug|x86.ActiveCfg = Debug|Win32
+		{9DA689EC-18EF-4DCA-A8A1-EF1E7CB5656E}.Debug|x86.Build.0 = Debug|Win32
+		{9DA689EC-18EF-4DCA-A8A1-EF1E7CB5656E}.Release|x64.ActiveCfg = Release|x64
+		{9DA689EC-18EF-4DCA-A8A1-EF1E7CB5656E}.Release|x64.Build.0 = Release|x64
+		{9DA689EC-18EF-4DCA-A8A1-EF1E7CB5656E}.Release|x86.ActiveCfg = Release|Win32
+		{9DA689EC-18EF-4DCA-A8A1-EF1E7CB5656E}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04FD2843-D96A-4296-9FDC-F103921BC672}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		server\shared\CGDK10.update_service.server.shared.vcxitems*{9da689ec-18ef-4dca-a8a1-ef1e7cb5656e}*SharedItemsImports = 4
+		server\shared\CGDK10.update_service.server.shared.vcxitems*{dd2b0cae-895d-43b5-9d3b-06e11a71cf8a}*SharedItemsImports = 4
+		server\shared\CGDK10.update_service.server.shared.vcxitems*{e80da72e-0562-436f-806d-a0a0dcd5b369}*SharedItemsImports = 9
+	EndGlobalSection
+EndGlobal

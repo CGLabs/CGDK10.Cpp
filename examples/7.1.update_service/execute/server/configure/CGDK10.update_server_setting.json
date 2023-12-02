@@ -1,0 +1,117 @@
+{
+  "service": {
+    "name": "CGCII update_server",
+    "id": 1301,
+
+    "logger_file": {
+      "path": "log",
+      "filename": "log_update@{:04}{:02}{:02}_{:02}{:02}{:02}.log",
+      "recreation": true,
+      "origin_time_type": "day_begin",
+      "interval": 1440,
+      "character_set": "mbcs"
+    }
+  },
+
+  "acceptor_user": {
+    "local_endpoint": {
+      "port": 31000
+    }
+  },
+
+  "update_resource_mamanger": {
+    "resource_list": {
+      "100": {
+        "type": "file",
+        "src": {
+          "path_base": "data_source",
+          "path": "folder_1",
+          "filename": "999_ÀÌÇý¿ø_007.gif"
+        },
+        "option": [ "block_compressed" ]
+      },
+      "101": {
+        "type": "file",
+        "src": {
+          "path_base": "data_source",
+          "path": "folder_1",
+          "filename": "Mazinger.Z.TV.1972.DVDRip-Hi.x264.AC3.1024.EP01-nezumi.mkv"
+        }
+      },
+      "102": {
+        "type": "file",
+        "src": {
+          "path_base": "data_source",
+          "path": ".",
+          "filename": "iu_06.gif"
+        },
+        "option": [ "block_compressed" ]
+      },
+      "103": {
+        "type": "file",
+        "src": {
+          "path_base": "data_source",
+          "path": ".",
+          "filename": "Mazinger.Z.TV.1972.DVDRip-Hi.x264.AC3.1024.EP01-nezumi.mkv"
+        },
+        "option": [ "block_compressed" ]
+      },
+      "104": {
+        "type": "folder",
+        "src": {
+          "path_base": "data_source",
+          "path": "folder_2"
+        },
+        "option": [ "block_compressed", "recursive" ]
+      },
+      "105": {
+        "type": "folder",
+        "src": {
+          "path_base": "data_source",
+          "path": "folder_2",
+          "filename": "*.gif"
+        },
+        "option": [ "block_compressed", "recursive" ]
+      },
+      "106": {
+        "type": "folder",
+        "resource_list": [
+          {
+            "type": "file",
+            "src": {
+              "path_base": "data_source",
+              "path": "folder_1",
+              "filename": "999_ÀÌÇý¿ø_007.gif"
+            },
+            "option": [ "block_compressed" ]
+          },
+          {
+            "type": "ref",
+            "ref": "101"
+          },
+          {
+            "type": "file",
+            "src": {
+              "path_base": "data_source",
+              "path": ".",
+              "filename": "iu_06.gif"
+            },
+            "option": [ "block_compressed" ]
+          },
+          {
+            "type": "ref",
+            "ref": "103"
+          },
+          {
+            "type": "ref",
+            "ref": "104"
+          }
+        ]
+      },
+      "107": {
+        "type": "ref",
+        "ref": "101"
+      }
+    }
+  }
+}

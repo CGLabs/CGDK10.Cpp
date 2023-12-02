@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="CGDK10.update_service.server.mfc.dlg.h" />
+    <ClInclude Include="CGDK10.update_service.server.mfc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CGDK10.update_service.server.mfc.dlg.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="CGDK10.update_service.server.mfc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\CGDK10.update_service.server.mfc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CGDK10.update_services.erver.mfc.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\CGDK10.update_services.erver.mfc.rc2" />
+  </ItemGroup>
+</Project>
