@@ -1,0 +1,9 @@
+{
+  "service_name": "CGCII simple chatting server",
+
+  "acceptor_user": {
+    "local_endpoint": {
+      "port": 22000
+    }
+  }
+}

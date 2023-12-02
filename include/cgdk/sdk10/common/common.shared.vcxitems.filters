@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="locked container">
+      <UniqueIdentifier>{35b6366d-e844-41b8-9748-e769bfd376db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lock">
+      <UniqueIdentifier>{49289aef-df64-45e9-844c-7b124809c52a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="string">
+      <UniqueIdentifier>{e27512b1-25ed-40d5-933a-8cc14252e689}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)definition.lock.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definition.string.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definition.timer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definitions.assert.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definitions.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definitions.message.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definitions.system.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)definitions.types.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)message_map.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)string_functions.windows.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)string_functions.android.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)string_functions.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)string_functions.ios.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)string_functions.linux.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)lockable.h">
+      <Filter>lock</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)lockfree_self_stack.h">
+      <Filter>locked container</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)lockfree_self_stack_64.h">
+      <Filter>locked container</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)scoped_lock.h">
+      <Filter>lock</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)locked_identity.h">
+      <Filter>locked container</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)locked_self_stack.h">
+      <Filter>locked container</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\common.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)read_me.txt" />
+  </ItemGroup>
+</Project>

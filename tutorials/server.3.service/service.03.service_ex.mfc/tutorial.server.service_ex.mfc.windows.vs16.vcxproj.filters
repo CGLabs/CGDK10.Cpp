@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="service.h" />
+    <ClInclude Include="resource.h">
+      <Filter>mfc</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>mfc</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>mfc</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>mfc</Filter>
+    </ClInclude>
+    <ClInclude Include="socket_tcp_server.h" />
+    <ClInclude Include="socket_tcp_user.h" />
+    <ClInclude Include="tutorial.server.service_ex.mfc.h">
+      <Filter>mfc</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorial.server.service_ex_dlg.h">
+      <Filter>mfc</Filter>
+    </ClInclude>
+    <ClInclude Include="include.h" />
+    <ClInclude Include="definition_service_ex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="service.cpp" />
+    <ClCompile Include="pch.cpp">
+      <Filter>mfc</Filter>
+    </ClCompile>
+    <ClCompile Include="tutorial.server.service_ex.mfc.cpp">
+      <Filter>mfc</Filter>
+    </ClCompile>
+    <ClCompile Include="tutorial.server.service_ex_dlg.cpp">
+      <Filter>mfc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="mfc">
+      <UniqueIdentifier>{f5d5dbea-f8e9-493f-9691-b867811c4800}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="server_setting.json" />
+    <None Include="res\tutorial.server_service_ex.mfc.rc2">
+      <Filter>mfc</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tutorial.server_service_ex.mfc.rc">
+      <Filter>mfc</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\tutorial.server_service_ex.mfc.ico">
+      <Filter>mfc</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

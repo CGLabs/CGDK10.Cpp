@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\..\define_message.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="tutorial.group.chatting.client.mfc.dlg.h" />
+    <ClInclude Include="tutorial.group.chatting.client.mfc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="tutorial.group.chatting.client.mfc.cpp" />
+    <ClCompile Include="tutorial.group.chatting.client.mfc.dlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tutorial.group.chatting.client.mfc.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\tutorial.group.chatting.client.mfc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\tutorial.group.chatting.client.mfc.rc2" />
+  </ItemGroup>
+</Project>

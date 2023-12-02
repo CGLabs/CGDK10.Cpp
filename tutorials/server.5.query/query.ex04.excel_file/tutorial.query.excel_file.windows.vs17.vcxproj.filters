@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="tutorial.query.excel_file.cpp" />
+    <ClCompile Include="tutorial.query.excel_file.create.cpp" />
+    <ClCompile Include="tutorial.query.excel_file.read.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="excel">
+      <UniqueIdentifier>{4e45e053-ab3b-4ac1-98a9-9b26a05e117e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="test.xlsx">
+      <Filter>excel</Filter>
+    </None>
+  </ItemGroup>
+</Project>

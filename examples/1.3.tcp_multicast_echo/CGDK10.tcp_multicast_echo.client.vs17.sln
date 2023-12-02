@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31717.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CGDK10.tcp_multicast_echo.client.mfc", "client\mfc\CGDK10.tcp_multicast_echo.client.mfc.vs17.vcxproj", "{B796CC6B-60ED-42AE-8AD2-8EF2EFF1521A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CGDK10.tcp_multicast_echo.client.console", "client\console\CGDK10.tcp_multicast_echo.client.console.vs17.vcxproj", "{A3D2CD82-3D1C-4FAC-A2C9-76D82E5672D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B796CC6B-60ED-42AE-8AD2-8EF2EFF1521A}.Debug|x64.ActiveCfg = Debug|x64
+		{B796CC6B-60ED-42AE-8AD2-8EF2EFF1521A}.Debug|x64.Build.0 = Debug|x64
+		{B796CC6B-60ED-42AE-8AD2-8EF2EFF1521A}.Release|x64.ActiveCfg = Release|x64
+		{B796CC6B-60ED-42AE-8AD2-8EF2EFF1521A}.Release|x64.Build.0 = Release|x64
+		{A3D2CD82-3D1C-4FAC-A2C9-76D82E5672D9}.Debug|x64.ActiveCfg = Debug|x64
+		{A3D2CD82-3D1C-4FAC-A2C9-76D82E5672D9}.Debug|x64.Build.0 = Debug|x64
+		{A3D2CD82-3D1C-4FAC-A2C9-76D82E5672D9}.Release|x64.ActiveCfg = Release|x64
+		{A3D2CD82-3D1C-4FAC-A2C9-76D82E5672D9}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4E2D8BE-629C-4899-B617-2B46E2227F4B}
+	EndGlobalSection
+EndGlobal

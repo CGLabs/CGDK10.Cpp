@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="echo_client.h" />
+    <ClInclude Include="CGDK10.tcp_echo_client.mfc.h" />
+    <ClInclude Include="CGDK10.tcp_echo_client_dlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="echo_client.cpp" />
+    <ClCompile Include="CGDK10.tcp_echo_client.mfc.cpp" />
+    <ClCompile Include="CGDK10.tcp_echo_client_dlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\CGDK10.tcp_echo_client.mfc.ico" />
+    <Image Include="res\icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CGDK10.tcp_echo_client.mfc.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\CGDK10.tcp_echo_client.mfc.rc2" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="CGDK10.chatting.server.console.cpp" />
+    <ClCompile Include="pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="configure file">
+      <UniqueIdentifier>{1c956fee-280a-41b0-8024-d64e3493bbc1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CGDK10.chatting.server_setting.json">
+      <Filter>configure file</Filter>
+    </None>
+  </ItemGroup>
+</Project>

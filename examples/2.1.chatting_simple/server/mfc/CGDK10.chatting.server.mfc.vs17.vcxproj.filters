@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="CGDK10.chatting.server.mfc.h" />
+    <ClInclude Include="CGDK10.chatting.server.mfc.dlg.h" />
+    <ClInclude Include="CGDK10.chatting.server_definition.h" />
+    <ClInclude Include="channel_setting_dlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="CGDK10.chatting.server.mfc.cpp" />
+    <ClCompile Include="CGDK10.chatting.server.mfc.dlg.cpp" />
+    <ClCompile Include="channel_setting_dlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\CGDK10.chatting.server.mfc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CGDK10.chatting.server.mfc.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="configure file">
+      <UniqueIdentifier>{07206abe-3992-4a43-86f8-15b3ded0b5da}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CGDK10.chatting.server_setting.json">
+      <Filter>configure file</Filter>
+    </None>
+  </ItemGroup>
+</Project>
