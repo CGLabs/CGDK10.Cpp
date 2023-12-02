@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77CEB75C-AFA3-4B1E-B3A1-A260E6C77DDF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CGCommon</RootNamespace>
+    <AssemblyName>CGCommon%28forCSharp%29_Unity3D</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Unity3D\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Unity3D\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CGDbuffer%28forCSharp%29_Unity3D">
+      <HintPath>..\bin\CGDBuffer\Unity3D\Debug\CGDbuffer(forCSharp)_Unity3D.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Json">
+      <HintPath>..\bin\System.Net.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttributeChildObject.cs" />
+    <Compile Include="CGConcurrentStack.cs" />
+    <Compile Include="CGDefinitionsMessage.cs" />
+    <Compile Include="CGDefinitionsObject.cs" />
+    <Compile Include="CGDHeap.cs" />
+    <Compile Include="CGDispatchable.cs" />
+    <Compile Include="CGDSeat.cs" />
+    <Compile Include="CGLog.cs" />
+    <Compile Include="CGManagerRegister.cs" />
+    <Compile Include="CGMSG.cs" />
+    <Compile Include="CGObjectStatus.cs" />
+    <Compile Include="CGUtils.cs" />
+    <Compile Include="ICGAttachable.cs" />
+    <Compile Include="ICGDestroyable.cs" />
+    <Compile Include="ICGDispatchable.cs" />
+    <Compile Include="ICGInitializable.cs" />
+    <Compile Include="ICGMessageable.cs" />
+    <Compile Include="ICGNameable.cs" />
+    <Compile Include="ICGObject.cs" />
+    <Compile Include="ICGObjectIdentifiable.cs" />
+    <Compile Include="ICGObjectStateable.cs" />
+    <Compile Include="ICGPausable.cs" />
+    <Compile Include="ICGReferenceCount.cs" />
+    <Compile Include="ICGStartable.cs" />
+    <Compile Include="ICGUpdatable.cs" />
+    <Compile Include="NCGObjectStateable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "..\..\" /y
+xcopy "$(TargetDir)$(TargetName).pdb" "..\..\" /y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

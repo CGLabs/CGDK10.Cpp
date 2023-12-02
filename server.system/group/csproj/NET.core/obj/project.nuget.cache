@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "siT6XmbHx4EHEVeRGeOPHEHolKzufh1CTRNCvQNBB0N0Rfaoc/gdY4PgK+3opjf8m+zYZq2NyK0f2zDUOZQtmg==",
+  "success": true,
+  "projectFilePath": "D:\\project_CGDK\\CGDK10.C#\\server.system\\group\\csproj\\NET.core\\CGDK10.server.system.group.NET.core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sangd\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\sangd\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\sangd\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

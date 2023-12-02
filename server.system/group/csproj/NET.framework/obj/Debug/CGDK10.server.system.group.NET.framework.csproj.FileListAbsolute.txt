@@ -1,0 +1,6 @@
+D:\project_CGDK\CGDK10.C#\dll\NET.framework\AnyCPU\Debug\CGDK10.server.system.group.NET.framework.dll
+D:\project_CGDK\CGDK10.C#\dll\NET.framework\AnyCPU\Debug\CGDK10.server.system.group.NET.framework.pdb
+D:\project_CGDK\CGDK10.C#\server.system\group\csproj\NET.framework\obj\Debug\CGDK10.server.system.group.NET.framework.csproj.AssemblyReference.cache
+D:\project_CGDK\CGDK10.C#\server.system\group\csproj\NET.framework\obj\Debug\CGDK10.server.system.group.NET.framework.csproj.CoreCompileInputs.cache
+D:\project_CGDK\CGDK10.C#\server.system\group\csproj\NET.framework\obj\Debug\CGDK10.server.system.group.NET.framework.dll
+D:\project_CGDK\CGDK10.C#\server.system\group\csproj\NET.framework\obj\Debug\CGDK10.server.system.group.NET.framework.pdb
