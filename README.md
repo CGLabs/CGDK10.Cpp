@@ -46,9 +46,9 @@
      CGCII socket 시스템은 강력한 성능과 안정성을 제공하며 인터페이스의 조합을 통해 다양한 기능의 구현이 가능합니다.<br/>
      이에 대한 예제와 설명입니다.<br/>
    - __~~network.2.p2p~~__<br/>
-     CGCII p2p system에 대한 설명입니다.<br/>
-     unrelaible, sequenced, reliable, reliable oreded 등의 delivery 시스템과 CGCII p2p framework<br/>
-     그리고 NAT 상에서의 홀펀칭과 릴레이 전송을 위한 CGCII TURN에 대한 설명입니다.<br/>
+     ~~CGCII p2p system에 대한 설명입니다.~~<br/>
+     ~~unrelaible, sequenced, reliable, reliable oreded 등의 delivery 시스템과 CGCII p2p framework~~<br/>
+     ~~그리고 NAT 상에서의 홀펀칭과 릴레이 전송을 위한 CGCII TURN에 대한 설명입니다.~~<br/>
    - __network.3.update__<br/>
      CGCII update system에 대한 설명입니다.<br/>
      파일을 패치하거나 전송을 하는 방법에 대한 설명입니다.<br/>     
@@ -66,11 +66,11 @@
    - __server.5.query__<br/>
      CGCII querier system를 사용해 rdb, redis, http query 등을 손쉽게 구현하는 예제 및 설명입니다.<br/>
    - __~~server.6.http_api~~__<br/>
-     google, naver, 은행 공통 전상망 등 각종 open api를 편리하게 사용할 수 있도록 미리 구현되어 있습니다.<br/>
-     이에 대한 사용 예제와 설명입니다.<br/>
+     ~~google, naver, 은행 공통 전상망 등 각종 open api를 편리하게 사용할 수 있도록 미리 구현되어 있습니다.~~<br/>
+     ~~이에 대한 사용 예제와 설명입니다.~~<br/>
    - __~~server.7.doss~~__<br/>
-     CGCII Distributed Object Storage System 에 대한 사용 예제입니다<br/>
-     대규모 분산 서버 시스템의 개발에서 높은 데이터 정합성이 필요할 경우 이를 사용해 편리하게 구현하는 예제와 설명입니다.<br/>
+     ~~CGCII Distributed Object Storage System 에 대한 사용 예제입니다.~~<br/>
+     ~~대규모 분산 서버 시스템의 개발에서 높은 데이터 정합성이 필요할 경우 이를 사용해 편리하게 구현하는 예제와 설명입니다.~~<br/>
    - __x.etc__<br/>
      기타<br/>
 
