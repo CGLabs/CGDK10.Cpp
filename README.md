@@ -45,14 +45,13 @@
      tcp/udp 소켓에 대한 설명입니다.<br/>
      CGCII socket 시스템은 강력한 성능과 안정성을 제공하며 인터페이스의 조합을 통해 다양한 기능의 구현이 가능합니다.<br/>
      이에 대한 예제와 설명입니다.<br/>
-   - __network.2.p2p__<br/>
+   - __~~network.2.p2p~~__<br/>
      CGCII p2p system에 대한 설명입니다.<br/>
-     unrelaible, sequenced, reliable, reliable oreded 등의 delibery 시스템과 CGCII p2p framework<br/>
+     unrelaible, sequenced, reliable, reliable oreded 등의 delivery 시스템과 CGCII p2p framework<br/>
      그리고 NAT 상에서의 홀펀칭과 릴레이 전송을 위한 CGCII TURN에 대한 설명입니다.<br/>
    - __network.3.update__<br/>
      CGCII update system에 대한 설명입니다.<br/>
-     파일을 패치하거나 전송을 하는 방법에 대한 설명입니다.<br/>
-     TCP와 UDP를 사용해 서버/클라이언트와 사용자간 파일 업데이트 및 전송의 구현 방법에 대한 설명입니다.<br/>
+     파일을 패치하거나 전송을 하는 방법에 대한 설명입니다.<br/>     
    - __server.1.log__<br/>
      CGCII log system에 대한 설명입니다.<br/>
      다양한 로거와 다중 계층 로깅 등에 대한 예제와 설명입니다.<br/>
@@ -66,10 +65,10 @@
      CGCII time_event는 서비스 중 서버의 운영 중 실행되어야 하는 각종 이벤트를 처리하는 시스템입니다. 이에 대한 설명입니다.<br/>
    - __server.5.query__<br/>
      CGCII querier system를 사용해 rdb, redis, http query 등을 손쉽게 구현하는 예제 및 설명입니다.<br/>
-   - __server.6.http_api__<br/>
+   - __~~server.6.http_api~~__<br/>
      google, naver, 은행 공통 전상망 등 각종 open api를 편리하게 사용할 수 있도록 미리 구현되어 있습니다.<br/>
      이에 대한 사용 예제와 설명입니다.<br/>
-   - __server.7.doss__<br/>
+   - __~~server.7.doss~~__<br/>
      CGCII Distributed Object Storage System 에 대한 사용 예제입니다<br/>
      대규모 분산 서버 시스템의 개발에서 높은 데이터 정합성이 필요할 경우 이를 사용해 편리하게 구현하는 예제와 설명입니다.<br/>
    - __x.etc__<br/>
@@ -82,22 +81,22 @@
    - __1.1 tcp_echo__<br/>
    - __1.2 tcp_relay_echo__<br/>
    - __1.3 tcp_multicat_echo__<br/>
-   - __2.1 chatting_simple__<br/>
-   - __2.2 chatting_scaleout__<br/>
-   - __2.3 chatting__<br/>
-   - __3.1 channel_system_1__<br/>
-   - __3.2 channel_system_2__<br/>
-   - __4.1 game_simple_server_1__<br/>
-   - __4.2 game_simple_server_2__<br/>
-   - __4.3 game_login_system__<br/>
-   - __4.4 game_scalable_server_system__<br/>
-   - __5.1 game_match_making_server_system__<br/>
-   - __5.2 game_friend_system__<br/>
-   - __5.3 game_mail_system_1__<br/>
-   - __5.6 game_shop_system__<br/>
-   - __6.1 game_mmo_field_1__<br/>
-   - __6.2 game_mmo_field_2__<br/>
-   - __6.3 game_quest_system__<br/>
-   - __6.4 game_instance_dungeon__<br/>
-   - __6.5 game_tade_server_system__<br/>
+   - __2.1 ~~chatting_simple~~__<br/>
+   - __2.2 ~~chatting_scaleout~~__<br/>
+   - __2.3 ~~chatting~~__<br/>
+   - __3.1 ~~channel_system_1~~__<br/>
+   - __3.2 ~~channel_system_2~~__<br/>
+   - __4.1 ~~game_simple_server_1~~__<br/>
+   - __4.2 ~~game_simple_server_2~~__<br/>
+   - __4.3 ~~game_login_system~~__<br/>
+   - __4.4 ~~game_scalable_server_system~~__<br/>
+   - __5.1 ~~game_match_making_server_system~~__<br/>
+   - __5.2 ~~game_friend_system~~__<br/>
+   - __5.3 ~~game_mail_system_1~~__<br/>
+   - __5.6 ~~game_shop_system~~__<br/>
+   - __6.1 ~~game_mmo_field_1~~__<br/>
+   - __6.2 ~~game_mmo_field_2~~__<br/>
+   - __6.3 ~~game_quest_system~~__<br/>
+   - __6.4 ~~game_instance_dungeon~~__<br/>
+   - __6.5 ~~game_tade_server_system~~__<br/>
    - __7.1 update_service__<br/>
