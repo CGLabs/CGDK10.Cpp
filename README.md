@@ -31,36 +31,52 @@
   ### /tutorials<br>
 
    - __common.1.object__ <br/>
-     기본적인 객체 시스템에 대한 설명입니다. 스마트포인터와 풀시스템 그리고 그에 관련된 인터페이스 시스템에 대한 설명입니다.<br/>
+     기본적인 객체 시스템에 대한 설명입니다.<br/>
+     스마트 포인터 시스템과 풀시스템 등에 대한 사용법과 객체에 관련된 인터페이스에 대한 설명입니다.<br/>
    - __common.2.buffer__<br/>
-     CGDK.buffer에 대한 설명입니다. CGDK.buffer에 대한 따로 해당 프로젝트에 자세히 설명되어 있으므로 간략한 설계만 있습니다. 또 CGDK.10에서 어떻게 적용되었는 지에 대한 설명입니다.<br/>
+     CGDK.buffer에 대한 설명입니다.<br/>
+     CGDK.10에서 어떻게 적용되었고 어떤 식으로 사용하는 지에 대한 설명입니다.<br/>
+     CGDK.buffer의 보다 자세한 사용법은 별도 프로젝트를 참조하시길 바랍니다.<br/>
    - __common.3.execute__<br/>
-     쓰레드와 실행 처리에 대한 설명입니다. CGCII executor는 proactor 패턴의 쓰레드풀 시스템입니다. 이를 사용해 비동기 처리나 반복 실행 또는 특정 시간 등의 처리 방법에 대한 설명입니다.<br/>
-   - __network.1.socket__ <br/>
-     tcp/udp 소켓에 대한 설명입니다. CGCII socket 시스템은 강력한 성능과 안정성을 제공하며 Interface의 조합을 통해 다양한 구현이 가능합니다. 이에 대한 설명입니다.<br/>
+     쓰레드와 실행 처리에 대한 설명입니다.<br/>
+     CGCII execute system는 proactor 패턴의 쓰레드풀 시스템입니다.
+     이를 사용해 비동기 처리 등 다양한 실행 처리의 처리 방법에 대한 설명입니다.<br/>
+   - __network.1.socket__<br/>
+     tcp/udp 소켓에 대한 설명입니다.<br/>
+     CGCII socket 시스템은 강력한 성능과 안정성을 제공하며 인터페이스의 조합을 통해 다양한 기능의 구현이 가능합니다.<br/>
+     이에 대한 예제와 설명입니다.<br/>
    - __network.2.p2p__<br/>
-     CGCII p2p system에 대한 설명입니다. unrelaible, sequenced, reliable, reliable oreded 등의 delibery 시스템과 CGCII p2p framework 그리고 NAT 상에서의 동작을 위한 CGCII TURN에 대한 설명입니다.<br/>
+     CGCII p2p system에 대한 설명입니다.<br/>
+     unrelaible, sequenced, reliable, reliable oreded 등의 delibery 시스템과 CGCII p2p framework<br/>
+     그리고 NAT 상에서의 홀펀칭과 릴레이 전송을 위한 CGCII TURN에 대한 설명입니다.<br/>
    - __network.3.update__<br/>
-     Update Patch 시스템에 대한 설명입니다. 다양한 파일을 패치하거나 <br/>
+     CGCII update system에 대한 설명입니다.<br/>
+     파일을 패치하거나 전송을 하는 방법에 대한 설명입니다.<br/>
+     TCP와 UDP를 사용해 서버/클라이언트와 사용자간 파일 업데이트 및 전송의 구현 방법에 대한 설명입니다.<br/>
    - __server.1.log__<br/>
-     log system에 대한 설명입니다. CGCII log system은 계층 로깅에 대한 설명과 다양한 로깅 방법 등에 대하 설명합니다.<br/>
+     CGCII log system에 대한 설명입니다.<br/>
+     다양한 로거와 다중 계층 로깅 등에 대한 예제와 설명입니다.<br/>
    - __server.2.group__<br/>
-     서버의 소켓 혹은 접속자 관리를 위한 CGCII group system에 대한 설명입니다.<br/>
+     서버의 소켓 혹은 접속자 관리를 위한 CGCII group system에 대한 설명입니다.<br/> 
    - __server.3.service__<br/>
-     CGCII server는 서버 프레임워크에 대한 설명입니다.<br/>
+     CGCII service는 서버 구현을 위한 프레임워크입니다.<br/>
+     구성요소를 조합해 서버 서비스를 구성하고 이를 통합 초기화와 실행 관리를 할 수 있도록 구현할 할 수 있습니다.<br/>
+     또 Admin System과의 연동을 통해 여러 서버들을 관리해 서비스를 구성하고 구축하는 예제와 설명입니다.<br/>
    - __server.4.time_event__<br/>
      CGCII time_event는 서비스 중 서버의 운영 중 실행되어야 하는 각종 이벤트를 처리하는 시스템입니다. 이에 대한 설명입니다.<br/>
    - __server.5.query__<br/>
-     odbc(rdb), redis, http query까지 다양한 외부 쿼리 처리 시스템에 대한 설명입니다. <br/>
+     CGCII querier system를 사용해 rdb, redis, http query 등을 손쉽게 구현하는 예제 및 설명입니다.<br/>
    - __server.6.http_api__<br/>
-     google, naver, 은행 공통 전상망 등 각종 open api를 편리하게 쓸 수 있도록 미리 구현한 시스템에 대한 설명입니다.<br/>
+     google, naver, 은행 공통 전상망 등 각종 open api를 편리하게 사용할 수 있도록 미리 구현되어 있습니다.<br/>
+     이에 대한 사용 예제와 설명입니다.<br/>
    - __server.7.doss__<br/>
-     대규모 분산 서버 시스템의 구현을 위해 높은 정합성을 제공하는 시스템에 대한 설명입니다. 
+     CGCII Distributed Object Storage System 에 대한 사용 예제입니다<br/>
+     대규모 분산 서버 시스템의 개발에서 높은 데이터 정합성이 필요할 경우 이를 사용해 편리하게 구현하는 예제와 설명입니다.<br/>
    - __x.etc__<br/>
      기타<br/>
 
-  CGDK.10/examples 디렉토리 밑에 예제파일들이 있습니다.
-  실제 서비스 가능할 수준의 품질로 작성된 것들 입니다. 
+  CGDK.10/examples 디렉토리 밑에 예제파일들이 있습니다.<br/>
+  실제 서비스 가능할 수준의 품질로 작성된 것들 입니다. <br/>
 
    ### /examples<br/>
    - __1.1 tcp_echo__<br/>
@@ -85,4 +101,3 @@
    - __6.4 game_instance_dungeon__<br/>
    - __6.5 game_tade_server_system__<br/>
    - __7.1 update_service__<br/>
-
