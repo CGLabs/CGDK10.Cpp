@@ -150,33 +150,33 @@ int main()
 
 		// 2) 일반적인 파일 읽기
 		{
-			std::cout << " > file > 'data_source/folder_1/999_girl_007.gif'"sv << std::endl;
+			std::cout << " > file > 'data_source/test_image.png'"sv << std::endl;
 			auto presource_file = make_object<resource::updatable::file>();
-			presource_file->initialize({{ "data_source"s, "folder_1"s, "999_이혜원_007.gif"s},{}, resource::eOPTION::BLOCK_COMPRESSED });
+			presource_file->initialize({{ "data_source"s, "folder_1"s, "test_image.png"s},{}, resource::eOPTION::BLOCK_COMPRESSED });
 			g_vector_resource_updatable.push_back(presource_file);
 		}
 
 		// 3) 용량이 큰 파일 읽기
 		{
-			std::cout << " > file > 'data_source/folder_1/Mazinger.Z.TV.1972.DVDRip-Hi.x264.AC3.1024.EP01-nezumi.mkv'"sv << std::endl;
+			std::cout << " > file > 'data_source/folder_1/bigfile.mkv.mkv'"sv << std::endl;
 			auto presource_file = make_object<resource::updatable::file>();
-			presource_file->initialize({ { "data_source"s, "folder_1"s, "Mazinger.Z.TV.1972.DVDRip-Hi.x264.AC3.1024.EP01-nezumi.mkv"s}, {}, resource::eOPTION::BLOCK_COMPRESSED });
+			presource_file->initialize({ { "data_source"s, "folder_1"s, "bigfile.mkv"s}, {}, resource::eOPTION::BLOCK_COMPRESSED });
 			g_vector_resource_updatable.push_back(presource_file);
 		}
 
 		// 4) /data_source 폴더 밑 파일 읽기
 		{
-			std::cout << " > file > './data_source/999_이혜원_007.gif'"sv << std::endl;
+			std::cout << " > file > './data_source/tile-05.jpg'"sv << std::endl;
 			auto presource_file = make_object<resource::updatable::file>();
-			presource_file->initialize({ { "data_source"s, "."s, "iu_06.gif"s}, {}, resource::eOPTION::BLOCK_COMPRESSED });
+			presource_file->initialize({ { "data_source"s, "."s, "tile-05.jpg"s}, {}, resource::eOPTION::BLOCK_COMPRESSED });
 			g_vector_resource_updatable.push_back(presource_file);
 		}
 
 		// 5) /data_source 폴더 밑 큰 파일 읽기
 		{
-			std::cout << " > file './data_source/Mazinger.Z.TV.1972.DVDRip-Hi.x264.AC3.1024.EP01-nezumi.mkv'"sv << std::endl;
+			std::cout << " > file './data_source/bigfile.mkv'"sv << std::endl;
 			auto presource_file = make_object<resource::updatable::file>();
-			presource_file->initialize({ { "data_source"s, "."s, "Mazinger.Z.TV.1972.DVDRip-Hi.x264.AC3.1024.EP01-nezumi.mkv"s}, {}, resource::eOPTION::BLOCK_COMPRESSED });
+			presource_file->initialize({ { "data_source"s, "."s, "bigfile.mkv"s}, {}, resource::eOPTION::BLOCK_COMPRESSED });
 			g_vector_resource_updatable.push_back(presource_file);
 		}
 
