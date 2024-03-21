@@ -36,16 +36,16 @@ class CGMFCCONTROL_EXT_CLASS CDialog_CGDK_component_info : public CDialogEx
 	DECLARE_DYNAMIC(CDialog_CGDK_component_info)
 public:
 			CDialog_CGDK_component_info(CWnd* pnode_parent = nullptr);
-			CDialog_CGDK_component_info(const std::vector<CGDK::sCOMPONENT_LICENSE>& _vector_components, CWnd* pnode_parent = nullptr);
+			CDialog_CGDK_component_info(const std::vector<CGDK::sCOMPONENT_INFO>& _vector_components, CWnd* pnode_parent = nullptr);
 	virtual ~CDialog_CGDK_component_info();
 
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_DIALOG_CGDK_VERSION_INFO };
 #endif
 
-			BOOL				CreateModaless(const std::vector<CGDK::sCOMPONENT_LICENSE>& _vector_components, CWnd* _pparent=nullptr);
+			BOOL				CreateModaless(const std::vector<CGDK::sCOMPONENT_INFO>& _vector_components, CWnd* _pparent=nullptr);
 			void				EnableControl(BOOL _enable=TRUE);
-			void				SetComponentInfo(const std::vector<CGDK::sCOMPONENT_LICENSE>& _vector_components) noexcept { m_pvector_components = &_vector_components; }
+			void				SetComponentInfo(const std::vector<CGDK::sCOMPONENT_INFO>& _vector_components) noexcept { m_pvector_components = &_vector_components; }
 
 
 protected:
@@ -53,7 +53,7 @@ protected:
 	virtual void				DoDataExchange(CDataExchange* pDX) override;
 	virtual BOOL				OnInitDialog() override;
 
-			const std::vector<CGDK::sCOMPONENT_LICENSE>* m_pvector_components;
+			const std::vector<CGDK::sCOMPONENT_INFO>* m_pvector_components;
 
 			CListCtrl			m_listctrl_components;
 			BOOL				m_is_enable_control;

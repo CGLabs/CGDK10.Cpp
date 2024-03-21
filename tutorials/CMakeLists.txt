@@ -77,5 +77,5 @@ ADD_SUBDIRECTORY (server.5.query)
 #ADD_SUBDIRECTORY (server.7.doss)
 
 # 14) web server
-ADD_SUBDIRECTORY (server.8.web_server)
+#ADD_SUBDIRECTORY (server.8.web_server)
 

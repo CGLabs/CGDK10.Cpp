@@ -89,8 +89,8 @@ public:
 public:
 			object_ptr<LOG_RECORD> plog_record;
 			object_ptr<Ilogger>	plogger;
-			Ilogger*			plogger_source;
-			int64_t				pos = 0;
+			Ilogger*			plogger_source {nullptr};
+			int64_t				pos{ 0 };
 protected:
 			template <class T>
 			void				process_stream_in(T _rhs);

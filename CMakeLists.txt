@@ -30,7 +30,7 @@ SET ( PROJECT_VERSION_TWEAK 1 )
 set ( DEFAULT_BULD_TYPE debug )
 
 # 3) build version
-CMAKE_MINIMUM_REQUIRED ( VERSION 3.10 )
+CMAKE_MINIMUM_REQUIRED ( VERSION 3.20 )
 
 
 #-----------------------------------------------------------------------------

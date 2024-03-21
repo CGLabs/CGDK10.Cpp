@@ -55,7 +55,7 @@ public:
 			}
 	[[nodiscard]] bool operator>=(const MD5& _rhs) const
 			{
-				for(int i=0; i<4; i++)
+				for(int i=0; i<4; ++i)
 				{
 					RETURN_IF(data.at(i) > _rhs.data.at(i), true);
 					RETURN_IF(data.at(i) < _rhs.data.at(i), false);
@@ -64,7 +64,7 @@ public:
 			}
 	[[nodiscard]] bool operator>(const MD5& _rhs) const
 			{
-				for(int i=0; i<4; i++)
+				for(int i=0; i<4; ++i)
 				{
 					RETURN_IF(data.at(i) > _rhs.data.at(i), true);
 					RETURN_IF(data.at(i) < _rhs.data.at(i), false);
@@ -73,7 +73,7 @@ public:
 			}
 	[[nodiscard]] bool operator<=(const MD5& _rhs) const
 			{
-				for(int i=0; i<4; i++)
+				for(int i=0; i<4; ++i)
 				{
 					RETURN_IF(data.at(i) < _rhs.data.at(i), true);
 					RETURN_IF(data.at(i) > _rhs.data.at(i), false);
@@ -82,7 +82,7 @@ public:
 			}
 	[[nodiscard]] bool operator<(const MD5& _rhs) const
 			{
-				for(int i=0; i<4; i++)
+				for(int i=0; i<4; ++i)
 				{
 					RETURN_IF(data.at(i) < _rhs.data.at(i), true);
 					RETURN_IF(data.at(i) > _rhs.data.at(i), false);

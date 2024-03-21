@@ -40,6 +40,10 @@ CMAKE_POLICY( VERSION 3.20 )
 # 1) tcp echo relay server - CGDK10
 ADD_SUBDIRECTORY (console)
 
+FIND_PACKAGE(Boost 1.71.0)
+IF(Boost_FOUND)
+
 # 2) tcp echo relay server - boost.asio
 ADD_SUBDIRECTORY (console.asio)
 
+ENDIF(Boost_FOUND)

@@ -314,6 +314,12 @@ namespace CGDK
 //----------------------------------------------------------------------------
 namespace CGDK
 {
+	class CGDK_INFO_CLASS
+	{
+	public:
+		CGDK_INFO_CLASS();
+	};
+
 	namespace api
 	{
 
@@ -350,7 +356,7 @@ namespace CGDK
 		#pragma warning(default:26812)
 		#pragma warning(default:26446)
 	#endif
-#define NFMT fmt
+	#define NFMT fmt
 #endif
 
 //----------------------------------------------------------------------------
@@ -745,10 +751,10 @@ namespace CGDK
 		#if WDK_NTDDI_VERSION >= NTDDI_WIN10
 			#ifdef NDEBUG
 				#pragma message("[CGDK10] 'CGDK10.system.object_Windows10.0_x64_Release.lib' will be linked")
-				#pragma comment(lib, "cgdk/sdk10/CGDK10.system.object_Windows10.0_x64_Release.lib")
+				#pragma comment(lib, "cgdk/sdk10/windows/CGDK10.system.object_Windows10.0_x64_Release.lib")
 			#else
 				#pragma message("[CGDK10] 'CGDK10.system.object_Windows10.0_x64_Debug.lib' will be linked")
-				#pragma comment(lib, "cgdk/sdk10/CGDK10.system.object_Windows10.0_x64_Debug.lib")
+				#pragma comment(lib, "cgdk/sdk10/windows/CGDK10.system.object_Windows10.0_x64_Debug.lib")
 			#endif
 		// Error - No supported
 		#else

@@ -10,8 +10,8 @@
 // 여기에 미리 컴파일하려는 헤더 추가
 #include "framework.h"
 
-#include "cgdk/sdk10/server.system.log.h"
-#include "cgdk/sdk10/server.system.mfc_controls.h"
+#include "cgdk/sdk10/server.log.h"
+#include "cgdk/sdk10/server.mfc_controls.h"
 
 using namespace CGDK;
 

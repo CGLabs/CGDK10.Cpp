@@ -67,7 +67,7 @@ public:
 	virtual	void				set_gc_type(eFACTORY_GC_TYPE _gc_type) noexcept override { this->m_statistics.gc_type = _gc_type; }
 
 	[[nodiscard]] TOBJECT*		alloc(CGNEW_DEBUG_INFO_PARAMETERS_WITH_DEFAULT);
-			void				dealloc(TOBJECT* _object) noexcept;
+			void				dealloc(TOBJECT* _pobject) noexcept;
 
 	#if !defined(_USE_TLS_FACTORY_STATISTICS)
 			auto				statistics_on_alloc_create() noexcept				{ ++this->m_statistics.now.alloc_create; ++this->m_statistics.now.existing; return ++this->m_statistics.now.in_using; }
@@ -407,7 +407,10 @@ TOBJECT* factory::object_pool<TOBJECT>::alloc(CGNEW_DEBUG_INFO_PARAMETERS)
 	// debug)
 	CGNEW_DEBUG_INFO_SET(pobject, _filename, _line);
 
-	// 3) process object alloc
+	// 3) set null
+	pobject->Next = nullptr;
+
+	// 4) process object alloc
 	this->template process_on_alloc<TOBJECT>(pobject);
 
 	// sustain)
@@ -428,16 +431,19 @@ TOBJECT* factory::object_pool<TOBJECT>::alloc(CGNEW_DEBUG_INFO_PARAMETERS)
 }
 
 template <class TOBJECT>
-void factory::object_pool<TOBJECT>::dealloc(TOBJECT* _object) noexcept
+void factory::object_pool<TOBJECT>::dealloc(TOBJECT* _pobject) noexcept
 {
 	// check)
-	CGASSERT_ERROR(_object != nullptr);
+	CGASSERT_ERROR(_pobject != nullptr);
 
 	// check)
-	CGASSERT_ERROR(_object->reference_count() == 0);
+	CGASSERT_ERROR(_pobject->reference_count() == 0);
+
+	// check)
+	CGASSERT_ERROR(_pobject->Next == nullptr);
 
 	// 1) on_free
-	this->template process_on_dealloc<TOBJECT>(_object);
+	this->template process_on_dealloc<TOBJECT>(_pobject);
 
 	// 2) 최대 한계 stack수보다 stack된 memory Block갯수가 많으면 할당해제한다.
 	if(this->m_statistics.now.existing <= this->m_statistics.now.existing_limits)
@@ -446,7 +452,7 @@ void factory::object_pool<TOBJECT>::dealloc(TOBJECT* _object) noexcept
 		this->statistics_on_free_stack();
 
 		// 3) stack object to garbage
-		this->m_stack_object.push(_object);
+		this->m_stack_object.push(_pobject);
 	}
 	else
 	{
@@ -454,7 +460,7 @@ void factory::object_pool<TOBJECT>::dealloc(TOBJECT* _object) noexcept
 		this->statistics_on_free_delete();
 
 		// 3) destroy object
-		this->template process_destroy_object<TOBJECT>(_object);
+		this->template process_destroy_object<TOBJECT>(_pobject);
 	}
 }
 

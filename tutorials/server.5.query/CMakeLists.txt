@@ -66,3 +66,6 @@ ADD_SUBDIRECTORY (query.ex03.rdb_transaction)
 
 # 10) ex.initializing_querier
 ADD_SUBDIRECTORY( query.ex05.initializing_querier)
+
+# 11) ex.struct_get_value
+ADD_SUBDIRECTORY( query.ex06.query.struct_get_value)

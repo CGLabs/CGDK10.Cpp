@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 #include "cgdk/sdk10/net.socket.h"
-#include "cgdk/sdk10/server.system.group.list.h"
+#include "cgdk/sdk10/server.group.list.h"
 
 using namespace CGDK;
 

@@ -26,10 +26,10 @@ devenv server.3.service\CGDK10.tutorial.server.service.windows.vs17.sln /%3 "%1|
 devenv server.4.time_event\CGDK10.tutorial.server.time_event.windows.vs17.sln /%3 "%1|%2"
 devenv server.5.query\CGDK10.tutorial.query.windows.vs17.sln /%3 "%1|%2"
 REM devenv server.6.oauth\CGDK10.tutorial.server.oauth.windows.vs17.sln /%3 "%1|%2"
-REM devenv server.7.doss\CGDK10.tutorial.doss.server.storage.windows.vs17.sln /%3 "%1|%2"
-REM devenv server.7.doss\CGDK10.tutorial.doss.server.session.windows.vs17.sln /%3 "%1|%2"
-REM devenv server.7.doss\CGDK10.tutorial.doss.client.windows.vs17.sln /%3 "%1|%2"
-REM devenv server.8.web_server\CGDK10.tutorial.server.web_server.windows.vs17.sln /%3 "%1|%2"
+devenv server.7.doss\CGDK10.tutorial.doss.server.storage.windows.vs17.sln /%3 "%1|%2"
+devenv server.7.doss\CGDK10.tutorial.doss.server.session.windows.vs17.sln /%3 "%1|%2"
+devenv server.7.doss\CGDK10.tutorial.doss.client.windows.vs17.sln /%3 "%1|%2"
+devenv server.8.web_server\CGDK10.tutorial.server.web_server.windows.vs17.sln /%3 "%1|%2"
 
 @ECHO ------------------------------------------
 @ECHO              Tutorial Projects             

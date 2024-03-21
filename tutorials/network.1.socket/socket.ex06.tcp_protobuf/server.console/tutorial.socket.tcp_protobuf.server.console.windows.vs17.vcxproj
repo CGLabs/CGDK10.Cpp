@@ -67,7 +67,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>../../../../lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\..\lib</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
       <Command>cd ..\common
@@ -92,7 +92,7 @@ cd ..\server.console</Command>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>../../../../lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\..\lib</AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
       <Command>cd ..\common

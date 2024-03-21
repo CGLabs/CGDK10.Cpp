@@ -103,53 +103,52 @@ public:
 	int					m_depth;
 };
 
-
 template <class TDATA>
 size_t locked_self_stack<TDATA>::size() const noexcept
 {
-	return m_depth;
+	return this->m_depth;
 }
 
 template <class TDATA>
 void locked_self_stack<TDATA>::clear() noexcept
 {
-	pop_all();
+	this->pop_all();
 }
 
 template <class TDATA>
 void locked_self_stack<TDATA>::push(TDATA _pdata) noexcept
 {
-	std::lock_guard<std::mutex> lock(m_lockable_head);
+	std::lock_guard<std::mutex> lock(this->m_lockable_head);
 
-	_pdata->Next = m_phead;
-	m_phead = _pdata;
+	_pdata->Next = this->m_phead;
+	this->m_phead = _pdata;
 
-	++m_depth;
+	++this->m_depth;
 }
 
 template <class TDATA>
 void locked_self_stack<TDATA>::push(TDATA _pfirst, TDATA _plast, int _count) noexcept
 {
-	std::lock_guard<std::mutex> lock(m_lockable_head);
+	std::lock_guard<std::mutex> lock(this->m_lockable_head);
 
-	_plast->Next = m_phead;
-	m_phead = _pfirst;
+	_plast->Next = this->m_phead;
+	this->m_phead = _pfirst;
 
-	m_depth += _count;
+	this->m_depth += _count;
 }
 
 template <class TDATA>
 TDATA locked_self_stack<TDATA>::pop() noexcept
 {
-	std::lock_guard<std::mutex> lock(m_lockable_head);
+	std::lock_guard<std::mutex> lock(this->m_lockable_head);
 
-	if(m_phead == nullptr)
+	if(this->m_phead == nullptr)
 		return nullptr;
 
-	auto data = m_phead;
-	m_phead = m_phead->Next;
+	auto data = this->m_phead;
+	this->m_phead = this->m_phead->Next;
 
-	--m_depth;
+	--this->m_depth;
 
 	return data;
 }
@@ -157,12 +156,12 @@ TDATA locked_self_stack<TDATA>::pop() noexcept
 template <class TDATA>
 TDATA locked_self_stack<TDATA>::pop_all() noexcept
 {
-	std::lock_guard<std::mutex> lock(m_lockable_head);
+	std::lock_guard<std::mutex> lock(this->m_lockable_head);
 
-	auto data = m_phead;
-	m_phead = nullptr;
+	auto data = this->m_phead;
+	this->m_phead = nullptr;
 
-	m_depth = 0;
+	this->m_depth = 0;
 
 	return data;
 }

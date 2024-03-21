@@ -70,6 +70,26 @@ template <class T>
 	return buf_serialized;
 }
 
+template <class T>
+[[nodiscard]] _shared_buffer<buffer> _make_shared_buffer(CGNEW_DEBUG_INFO_PARAMETERS)
+{
+	// definition)
+	typedef std::remove_reference_t<std::remove_cv_t<T>> TX;
+
+	// 1) allocate shared_buffer
+	auto buf_serialized = _alloc_shared_buffer(get_size_of(TX()) CGNEW_DEBUG_INFO_COMMA CGNEW_DEBUG_INFO_PARAMETERS_PASSING);
+
+	// 2) append _data
+	buf_serialized.template append<TX>();
+
+	// 3) do post_process (optional)
+	_do_post_make_shared_buffer<TX>(buf_serialized);
+
+	// return) 
+	return buf_serialized;
+}
+
+
 template <class ELEM_T>
 template<class BUFFER_T>
 [[nodiscard]] constexpr _shared_buffer<BUFFER_T> _buffer_view<ELEM_T>::_extract_shared_buffer()

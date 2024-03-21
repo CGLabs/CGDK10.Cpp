@@ -41,6 +41,8 @@ CMAKE_POLICY( VERSION 3.20 )
 ADD_SUBDIRECTORY (1.1.tcp_echo)
 ADD_SUBDIRECTORY (1.2.tcp_relay_echo)
 ADD_SUBDIRECTORY (1.3.tcp_multicast_echo)
+#ADD_SUBDIRECTORY (1.4.tcp_echo_ex)
+#ADD_SUBDIRECTORY (1.5.udp_echo)
 
 # 2) 1.chatting_simple
 ADD_SUBDIRECTORY (2.1.chatting_simple)

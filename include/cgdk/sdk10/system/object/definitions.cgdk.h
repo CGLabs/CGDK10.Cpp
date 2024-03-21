@@ -69,18 +69,6 @@ enum class ePLATFORM : uint64_t
 	ALL							 = 0xffffffffffffffff
 };
 
-enum class eLICENSE_TYPE
-{
-	NOT_DEFINED					 = 0,
-	FREE						 = 1,
-	INDIE						 = 2,
-	LIMITED_PROJECT				 = 3,
-	LIMITED_COMPPANY			 = 4,
-	UNLIMITED					 = 5,
-	DEVELOPER					 = 6,
-	MAX
-};
-
 // 4) component info
 struct sCOMPONENT
 {
@@ -99,67 +87,17 @@ public:
 	ePLATFORM					platform = ePLATFORM::NOT_DEFINED;
 	eCONFIGURATION				configuration = eCONFIGURATION::NOT_DEFINED;
 
-	chrono::time::utc::time_point time_expire;
 	chrono::time::utc::time_point time_create;
-	chrono::time::utc::time_point time_update;
-
-	// 3) crc
-	uint32_t					crc = 0;
 
 	// enable struct serialize
 	ENABLE_STRUCT_SERIALIZABLE
 };
 
-struct sCOMPONENT_LICENSE
+struct sCOMPONENT_INFO
 {
 public:
 	// 1) component info
 	sCOMPONENT					component_info;
-
-	// 2) license type
-	eLICENSE_TYPE				license_type	 = eLICENSE_TYPE::UNLIMITED;
-	std::string					license_company;
-	std::string					license_project;
-	std::string					license_instance_id;
-
-	// enable struct serialize
-	ENABLE_STRUCT_SERIALIZABLE
-};
-
-struct sLICENSE_ABOUT
-{
-	chrono::time::utc::time_point time_generated;
-};
-
-struct sLICENSE_INFO
-{
-public:
-	// 1) info1
-	sLICENSE_ABOUT				info;
-	std::vector<sCOMPONENT_LICENSE> vector_component;
-
-	// 2) 
-	bool						is_loaded = false;
-};
-
-struct sLICENSE_FILE
-{
-public:
-	// 1) info1
-	sLICENSE_ABOUT				info;
-
-	// 2) license
-	eLICENSE_TYPE				license_type = eLICENSE_TYPE::UNLIMITED;
-	std::string					license_company;
-	std::string					license_project;
-	std::string					license_instance_id;
-	chrono::time::utc::time_point license_time_expire;
-
-	chrono::time::utc::time_point license_time_create;
-	chrono::time::utc::time_point license_time_update;
-	uint64_t					license_count_update = 1;
-
-	std::vector<sCOMPONENT>		vector_component;
 
 	// enable struct serialize
 	ENABLE_STRUCT_SERIALIZABLE
@@ -175,13 +113,10 @@ public:
 namespace CGDK
 {
 	[[nodiscard]] int											get_version() noexcept;
-	[[nodiscard]] const std::vector<sCOMPONENT_LICENSE>&		get_component_info() noexcept;
-	[[nodiscard]] sCOMPONENT_LICENSE							get_component_info(std::string_view _name) noexcept;
-	[[nodiscard]] std::string_view								get_string_license() noexcept;
-	[[nodiscard]] bool											get_license_alert() noexcept;
+	[[nodiscard]] const std::vector<sCOMPONENT_INFO>&			get_component_info() noexcept;
+	[[nodiscard]] sCOMPONENT_INFO								get_component_info(std::string_view _name) noexcept;
 
 	template <class T>	[[nodiscard]] std::basic_string_view<T> to_string(eCOMPILER _compiler) noexcept;
 	template <class T>	[[nodiscard]] std::basic_string_view<T> to_string(eCONFIGURATION _configuration) noexcept;
 	template <class T>	[[nodiscard]] std::basic_string_view<T> to_string(ePLATFORM _platform) noexcept;
-	template <class T>	[[nodiscard]] std::basic_string_view<T> to_string(eLICENSE_TYPE _license_type) noexcept;
 }

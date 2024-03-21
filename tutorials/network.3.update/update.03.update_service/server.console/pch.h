@@ -25,8 +25,8 @@
 
 // 3) CGDK
 #include "cgdk/sdk10/net.update.h"
-#include "cgdk/sdk10/server.system.group.list.h"
-#include "cgdk/sdk10/server.system.service.h"
+#include "cgdk/sdk10/server.group.list.h"
+#include "cgdk/sdk10/server.service.h"
 
 // definitions) 
 using namespace CGDK;

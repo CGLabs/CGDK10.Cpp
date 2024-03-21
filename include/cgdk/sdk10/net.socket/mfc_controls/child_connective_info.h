@@ -55,6 +55,7 @@ protected:
 	afx_msg void				OnBnClickedCheckGraphTry();
 	afx_msg void				OnBnClickedCheckGraphConnect();
 	afx_msg void				OnBnClickedCheckGraphDisconnect();
+	afx_msg void				OnBnClickedResetStatistics();
 	afx_msg void				OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pscroll_bar);
 
 	afx_msg	LRESULT				OnCGMessageNotify(WPARAM _wparam, LPARAM _lparam);
@@ -82,6 +83,12 @@ protected:
 			LONGLONG			m_countTry;
 			LONGLONG			m_count_connect;
 			LONGLONG			m_count_disconnect;
+
+			LONGLONG			m_statistics_offet_count_try = 0;
+			LONGLONG			m_statistics_offet_success_connect = 0;
+			LONGLONG			m_statistics_offet_disconnect = 0;
+			LONGLONG			m_statistics_offet_fail_connect = 0;
+			LONGLONG			m_statistics_offet_error_disconnect = 0;
 
 			const statistics::unit_connective*	m_pstatistics;
 			lockable<>			m_lockable_statistics;

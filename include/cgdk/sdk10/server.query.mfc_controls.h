@@ -41,7 +41,7 @@
 //  head files
 //----------------------------------------------------------------------------
 // 1) CGDK base header files
-#include "cgdk/sdk10/server.system.mfc_controls.h"
+#include "cgdk/sdk10/server.mfc_controls.h"
 #include "cgdk/sdk10/server.query.h"
 
 // 2) Child Dialog
@@ -108,10 +108,10 @@ namespace CGDK
 		#if WDK_NTDDI_VERSION >= NTDDI_WIN10
 			#ifdef NDEBUG
 				#pragma message("[CGDK10] 'CGDK10.server.query.mfc_controls_Windows10.0_x64_Release_Dynamic.lib' will be linked")
-				#pragma comment(lib, "cgdk/sdk10/CGDK10.server.query.mfc_controls_Windows10.0_x64_Release_Dynamic.lib")
+				#pragma comment(lib, "cgdk/sdk10/windows/CGDK10.server.query.mfc_controls_Windows10.0_x64_Release_Dynamic.lib")
 			#else
 				#pragma message("[CGDK10] 'CGDK10.server.query.mfc_controls_Windows10.0_x64_Debug_Dynamic.lib' will be linked")
-				#pragma comment(lib, "cgdk/sdk10/CGDK10.server.query.mfc_controls_Windows10.0_x64_Debug_Dynamic.lib")
+				#pragma comment(lib, "cgdk/sdk10/windows/CGDK10.server.query.mfc_controls_Windows10.0_x64_Debug_Dynamic.lib")
 			#endif
 		// Error - No supported
 		#else

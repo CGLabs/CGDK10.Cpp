@@ -207,11 +207,11 @@ struct message_headable_primitive : public message_headerable
 	static bool			_validate_message(const std::vector<shared_buffer>& _vector_buffer) noexcept
 	{
 		// declare)
-		T	total_bytes = 0;
+		int32_t total_bytes = 0;
 
 		// 1) total_bytes
 		for (auto& iter: _vector_buffer)
-			total_bytes += iter.size<T>();
+			total_bytes += (int32_t)iter.size<T>();
 
 		for(auto iter= _vector_buffer.begin(), iter_end = _vector_buffer.end(); iter != iter_end;)
 		{
@@ -225,7 +225,7 @@ struct message_headable_primitive : public message_headerable
 				if (iter == iter_end) return false;
 
 				// - message_size를 구한다.
-				auto message_size = *buf_temp.data<T>(N);
+				int32_t message_size = (int32_t)*buf_temp.data<T>(N);
 					
 				// check) message_size가 0byte면 안됀다.
 				CGASSERT_ERROR(message_size != 0);
@@ -242,7 +242,7 @@ struct message_headable_primitive : public message_headerable
 				CGASSERT_ERROR(total_bytes >= 0);
 				if (total_bytes < 0) return false;
 
-				while (message_size >= buf_temp.size<T>())
+				while (message_size >= (int32_t)buf_temp.size<T>())
 				{
 					message_size -= buf_temp.size<int32_t>();
 
@@ -267,15 +267,15 @@ struct message_headable_primitive : public message_headerable
 	{
 		// 1) message 크기를 확인한다.
 		const char* data_ = _buffer.data();
-		std::size_t size_ = _buffer.size();
+		int64_t size_ = _buffer.size<int64_t>();
 
 		while(size_ != 0)
 		{
 			// check) message의 크기가 0Byte면 안됀다.
-			CGDK_ASSERT(size_ >= sizeof(T) + N);
-			if (size_ < sizeof(T) + N) return false;
+			CGDK_ASSERT(size_ >= static_cast<int64_t>(sizeof(T) + N));
+			if (size_ < static_cast<int64_t>(sizeof(T) + N)) return false;
 
-			auto message_size = *reinterpret_cast<const T*>(data_ + N);
+			int64_t message_size = *reinterpret_cast<const T*>(data_ + N);
 
 			// check) message의 크기가 0Byte면 안됀다.
 			CGDK_ASSERT(message_size !=0);

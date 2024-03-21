@@ -34,7 +34,7 @@ public:
 	virtual ~Ischedulable() noexcept {}
 
 public:
-			void				next_tick(const chrono::tick::time_point& _tick_next) { this->m_tick_next = _tick_next; }
+			void				next_tick(chrono::tick::time_point _tick_next) { this->m_tick_next = _tick_next; }
 	[[nodiscard]] auto			next_tick() const noexcept { return this->m_tick_next; }
 
 	[[nodiscard]] auto			schedulable_manager() const noexcept { return this->m_pschedulable_manager; }

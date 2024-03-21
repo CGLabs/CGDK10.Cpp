@@ -1,5 +1,5 @@
 ﻿#include "cgdk/sdk10/net.socket.h"
-#include "cgdk/sdk10/server.system.observer.h"
+#include "cgdk/sdk10/server.observer.h"
 #include "../../define_message.h"
 
 #include <iostream>

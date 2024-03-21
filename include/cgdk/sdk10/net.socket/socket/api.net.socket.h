@@ -29,9 +29,9 @@ namespace CGDK
 namespace api
 {
 
-std::string					get_host_name() noexcept;
-std::string					get_host_id() noexcept;
-std::vector<sMAC_ADDRESS>	get_mac_address() noexcept;
+std::string					get_host_name();
+std::string					get_host_id();
+std::vector<sMAC_ADDRESS>	get_mac_address();
 
 class socket
 {
@@ -46,7 +46,7 @@ public:
 
 // constructor/destructor)
 private:
-			socket() noexcept;
+			socket();
 			~socket() noexcept;
 
 // public)

@@ -109,6 +109,7 @@
 #include <functional>
 #include <type_traits>
 #include <climits>
+#include <cstdint>
 
 
 // ----------------------------------------------------------------------------

@@ -264,49 +264,49 @@ namespace io
 // Functions) 
 bool operator == (const sockaddr_in& _lhs, const sockaddr_in& _rhs);
 
-net::sockaddr								from_string			(std::string_view		_address, uint16_t _port, ADDRESS_FAMILY _af_prefer) noexcept;
-net::sockaddr								from_string			(std::wstring_view		_address, uint16_t _port, ADDRESS_FAMILY _af_prefer) noexcept;
-net::sockaddr								from_string			(std::u16string_view	_address, uint16_t _port, ADDRESS_FAMILY _af_prefer) noexcept;
-net::sockaddr								from_string			(std::u32string_view	_address, uint16_t _port, ADDRESS_FAMILY _af_prefer) noexcept;
-net::sockaddr								from_string			(std::string_view		_address, uint16_t _port = 0, const addrinfo* _hints = nullptr) noexcept;
-net::sockaddr								from_string			(std::wstring_view		_address, uint16_t _port = 0, const addrinfo* _hints = nullptr) noexcept;
-net::sockaddr								from_string			(std::u16string_view	_address, uint16_t _port = 0, const addrinfo* _hints = nullptr) noexcept;
-net::sockaddr								from_string			(std::u32string_view	_address, uint16_t _port = 0, const addrinfo* _hints = nullptr) noexcept;
-net::sockaddr								from_string			(std::string_view		_address, std::string_view		_service, int _socket_type = SOCK_STREAM, int _protocol = IPPROTO_RESERVED_MAX) noexcept;
-net::sockaddr								from_string			(std::wstring_view		_address, std::wstring_view		_service, int _socket_type = SOCK_STREAM, int _protocol = IPPROTO_RESERVED_MAX) noexcept;
-net::sockaddr								from_string			(std::u16string_view	_address, std::u16string_view	_service, int _socket_type = SOCK_STREAM, int _protocol = IPPROTO_RESERVED_MAX) noexcept;
-net::sockaddr								from_string			(std::u32string_view	_address, std::u32string_view	_service, int _socket_type = SOCK_STREAM, int _protocol = IPPROTO_RESERVED_MAX) noexcept;
+net::sockaddr								from_string			(std::string_view		_address, uint16_t _port, ADDRESS_FAMILY _af_prefer);
+net::sockaddr								from_string			(std::wstring_view		_address, uint16_t _port, ADDRESS_FAMILY _af_prefer);
+net::sockaddr								from_string			(std::u16string_view	_address, uint16_t _port, ADDRESS_FAMILY _af_prefer);
+net::sockaddr								from_string			(std::u32string_view	_address, uint16_t _port, ADDRESS_FAMILY _af_prefer);
+net::sockaddr								from_string			(std::string_view		_address, uint16_t _port = 0, const addrinfo* _hints = nullptr);
+net::sockaddr								from_string			(std::wstring_view		_address, uint16_t _port = 0, const addrinfo* _hints = nullptr);
+net::sockaddr								from_string			(std::u16string_view	_address, uint16_t _port = 0, const addrinfo* _hints = nullptr);
+net::sockaddr								from_string			(std::u32string_view	_address, uint16_t _port = 0, const addrinfo* _hints = nullptr);
+net::sockaddr								from_string			(std::string_view		_address, std::string_view		_service, int _socket_type = SOCK_STREAM, int _protocol = IPPROTO_RESERVED_MAX);
+net::sockaddr								from_string			(std::wstring_view		_address, std::wstring_view		_service, int _socket_type = SOCK_STREAM, int _protocol = IPPROTO_RESERVED_MAX);
+net::sockaddr								from_string			(std::u16string_view	_address, std::u16string_view	_service, int _socket_type = SOCK_STREAM, int _protocol = IPPROTO_RESERVED_MAX);
+net::sockaddr								from_string			(std::u32string_view	_address, std::u32string_view	_service, int _socket_type = SOCK_STREAM, int _protocol = IPPROTO_RESERVED_MAX);
 
 template <class T>
-std::basic_string_view<T>					to_string			(T* _str_address, std::size_t _max_length, const net::sockaddr& _sockaddr) noexcept;
-template<> std::string_view					to_string<char>		(char* _str_address, std::size_t _max_length, const net::sockaddr& _sockaddr) noexcept;
-template<> std::wstring_view				to_string<wchar_t>	(wchar_t* _str_address, std::size_t _max_length, const net::sockaddr& _sockaddr) noexcept;
+std::basic_string_view<T>					to_string			(T* _str_address, std::size_t _max_length, const net::sockaddr& _sockaddr);
+template<> std::string_view					to_string<char>		(char* _str_address, std::size_t _max_length, const net::sockaddr& _sockaddr);
+template<> std::wstring_view				to_string<wchar_t>	(wchar_t* _str_address, std::size_t _max_length, const net::sockaddr& _sockaddr);
 
 template <class T>
 std::basic_string<T>
-to_string(const net::sockaddr& _address) noexcept { T temp[256]; return std::basic_string<T>(to_string<T>(temp, 256, _address)); }
+to_string(const net::sockaddr& _address) { T temp[256]; return std::basic_string<T>(to_string<T>(temp, 256, _address)); }
 template <class T>
 std::basic_string<T>
-to_string(const net::ip::address& _address) noexcept { T temp_str[256]; return std::basic_string<T>(to_string<T>(temp_str, 256, _address)); }
+to_string(const net::ip::address& _address) { T temp_str[256]; return std::basic_string<T>(to_string<T>(temp_str, 256, _address)); }
 template <class T>
 std::basic_string<T>
-to_string(const net::ip::address_v4& _address) noexcept { T temp_str[256]; return std::basic_string<T>(to_string<T>(temp_str, 256, _address)); }
+to_string(const net::ip::address_v4& _address) { T temp_str[256]; return std::basic_string<T>(to_string<T>(temp_str, 256, _address)); }
 template <class T>
 std::basic_string<T>
-to_string(const net::ip::address_v6& _address) noexcept { T temp_str[256]; return std::basic_string<T>(to_string<T>(temp_str, 256, _address)); }
+to_string(const net::ip::address_v6& _address) { T temp_str[256]; return std::basic_string<T>(to_string<T>(temp_str, 256, _address)); }
 
 template <class T, class Allocator = std::allocator<T>>
 std::basic_string<T, std::char_traits<T>, Allocator>
-to_string (const net::sockaddr& _address, const Allocator& _allocator) noexcept { T temp_str[256]; return std::basic_string<T, std::char_traits<T>, Allocator>(to_string<T>(temp_str, 256, _address), _allocator); }
+to_string (const net::sockaddr& _address, const Allocator& _allocator) { T temp_str[256]; return std::basic_string<T, std::char_traits<T>, Allocator>(to_string<T>(temp_str, 256, _address), _allocator); }
 template <class T, class Allocator = std::allocator<T>>
 std::basic_string<T, std::char_traits<T>, Allocator>
-to_string (const net::ip::address& _address, const Allocator& _allocator) noexcept { T temp_str[256]; return std::basic_string<T, std::char_traits<T>, Allocator>(to_string<T>(temp_str, 256, _address), _allocator); }
+to_string (const net::ip::address& _address, const Allocator& _allocator) { T temp_str[256]; return std::basic_string<T, std::char_traits<T>, Allocator>(to_string<T>(temp_str, 256, _address), _allocator); }
 template <class T, class Allocator = std::allocator<T>>
 std::basic_string<T, std::char_traits<T>, Allocator>
-to_string (const net::ip::address_v4& _address, const Allocator& _allocator) noexcept { T temp_str[256]; return	std::basic_string<T, std::char_traits<T>, Allocator>(to_string<T>(temp_str, 256, _address), _allocator); }
+to_string (const net::ip::address_v4& _address, const Allocator& _allocator) { T temp_str[256]; return	std::basic_string<T, std::char_traits<T>, Allocator>(to_string<T>(temp_str, 256, _address), _allocator); }
 template <class T, class Allocator = std::allocator<T>>
 std::basic_string<T, std::char_traits<T>, Allocator>
-to_string (const net::ip::address_v6& _address, const Allocator& _allocator) noexcept { T temp_str[256]; return	std::basic_string<T, std::char_traits<T>, Allocator>(to_string<T>(temp_str, 256, _address), _allocator); }
+to_string (const net::ip::address_v6& _address, const Allocator& _allocator) { T temp_str[256]; return	std::basic_string<T, std::char_traits<T>, Allocator>(to_string<T>(temp_str, 256, _address), _allocator); }
 
 
 // ----------------------------------------------------------------------------

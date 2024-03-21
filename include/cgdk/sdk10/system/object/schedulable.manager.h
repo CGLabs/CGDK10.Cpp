@@ -83,7 +83,7 @@ protected:
 			void				process_execute_schedulable(object_ptr<Ischedulable>&& _pschedulable);
 			void				process_cancel_schedulable_all() noexcept;
 
-			void				_push_schedulable(object_ptr<Ischedulable>&& _pschedulable);
+			void				_push_schedulable(Ischedulable* _pschedulable);
 			void				_pop_schedulable() noexcept;
 
 private:

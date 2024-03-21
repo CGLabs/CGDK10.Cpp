@@ -73,7 +73,7 @@ public:
 
 	[[nodiscard]] static constexpr address_v6 any() noexcept { return address_v6(); }
 	[[nodiscard]] static constexpr address_v6 loopback() noexcept { address_v6 tmp; tmp.sin6_addr.s6_addr[15] = 1; return tmp;}
-
+	
 // assignment)
 	constexpr address_v6&		operator = (const address_v6& _rhs) noexcept;
 public:

@@ -33,7 +33,6 @@ public:
 			Nquery() noexcept;
 	virtual ~Nquery() noexcept;
 
-public:
 	// 1) create command and set the command text
 			void				prepare_query(const std::string_view _command);
 
@@ -85,7 +84,20 @@ public:
 			// - ordinals
 	[[nodiscard]] std::size_t	get_ordinal(const std::string_view _column);
 
-public:
+			// - get result
+			template<class TDEST>
+	[[nodiscard]] auto			get_result()
+								{
+									std::vector<typename ODBC_GET_VALUE<typename _ODBC_DEFAULT_PARAM<TDEST>::type, TDEST>::TRETURN> result;
+									this->move_first();
+									do
+									{
+										result.push_back(ODBC_GET_VALUE<typename _ODBC_DEFAULT_PARAM<TDEST>::type, TDEST>::get(this->m_handle_stmt, static_cast<SQLUSMALLINT>(1)));
+									} while (this->move_next() == eRESULT::SUCCESS);
+									this->get_next_result();
+									return result;
+								}
+
 			template <class TOBJECT>
 			struct _ITEM
 			{
@@ -101,10 +113,10 @@ public:
 			[[nodiscard]] bool		is_failed() const noexcept { return !this->is_success(); }
 			[[nodiscard]] 			operator bool() const noexcept { return this->is_success(); }
 
-				template<class TDEST, class TSOURCE = typename _ODBC_DEFAULT_PARAM<TDEST>::type>
+			template<class TDEST, class TSOURCE = typename _ODBC_DEFAULT_PARAM<TDEST>::type>
 			[[nodiscard]] typename ODBC_GET_VALUE<TSOURCE, TDEST>::TRETURN
 									get_value(std::size_t _ordinal = 1) const { return ODBC_GET_VALUE<TSOURCE, TDEST>::get(pquery->m_handle_stmt, static_cast<SQLUSMALLINT>(_ordinal)); }
-				template<class TDEST, class TSOURCE = typename _ODBC_DEFAULT_PARAM<TDEST>::type>
+			template<class TDEST, class TSOURCE = typename _ODBC_DEFAULT_PARAM<TDEST>::type>
 			[[nodiscard]] typename ODBC_GET_VALUE<TSOURCE, TDEST>::TRETURN
 									get_value(const std::string_view _column_name) const { return this->get_value(pquery->get_ordinal(_column_name)); }
 			};
@@ -132,7 +144,7 @@ public:
 			};
 			template <typename TOBJECT> using ITERATOR = _ITERATOR<TOBJECT>;
 
-	// 2) SQL handle STMT and Query String
+	// 6) SQL handle STMT and Query String
 			std::string			m_query_string;
 			std::vector<sPARAM>	m_vector_params;
 			std::map<std::string, std::size_t> m_map_column;
@@ -145,7 +157,7 @@ protected:
 			SQLRETURN			_prepare_query(std::string_view _command, SQLHSTMT _handle_stmt);
 			SQLRETURN			_prepare_query(std::wstring_view _command, SQLHSTMT _handle_stmt);
 
-public:
+private:
 	virtual	void				on_final_release() noexcept override { this->close_query(); CGDK::query::rdb::odbc::Iquery::on_final_release();}
 };
 

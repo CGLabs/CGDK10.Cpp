@@ -57,6 +57,3 @@ ADD_SUBDIRECTORY (object.ex01.file_io)
 
 # 7) endcoding_decoding
 ADD_SUBDIRECTORY (object.ex02.endcoding_decoding)
-
-# 8) object_license_info
-ADD_SUBDIRECTORY (object.ex03.license_info.console)

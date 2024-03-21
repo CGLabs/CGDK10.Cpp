@@ -108,8 +108,8 @@ protected:
 
 			shared_buffer		m_buffer_received; // 현재 메시지 처리하기 위해 남은 잔량 buffer...
 			WSABUF				m_wsabuf_receiving; // receive를 걸어 놓은 shared_buffer...
-			DWORD				m_wsa_bytes_received = 0;
-			DWORD				m_wsa_flag = 0;
+			DWORD				m_wsa_bytes_received{ 0 };
+			DWORD				m_wsa_flag{ 0 };
 
 			object_ptr<executable_receiving> m_pexecutable_receiving; //! @brief receive를 처리할 Iexecutable 객체
 		#elif defined(_SYS_EPOLL_H)

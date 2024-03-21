@@ -11,7 +11,6 @@
 #include "framework.h"
 
 #include "cgdk/sdk10/net.socket.h"
-#include "cgdk/sdk10/server.system.group.h"
 #include "../define_message_chatting.h"
 
 using namespace CGDK;

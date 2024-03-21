@@ -76,7 +76,7 @@ public:
 			void				reset() noexcept;
 
 	[[nodiscard]] const auto&	statistics() const noexcept { return m_statistics_thread; }
-			void				statistics_executing_begin(const chrono::tick::time_point& _tick) noexcept;
+			void				statistics_executing_begin(chrono::tick::time_point _tick) noexcept;
 			void				statistics_executing_begin() noexcept;
 			void				statistics_executing_end() noexcept;
 			void				statistics_error() noexcept;

@@ -113,21 +113,26 @@ protected:
 			bool				m_enable_progress_log = true;
 };
 
-inline CGDK::object_ptr<CGDK::net::io::Iconnectable> CGDK::net::io::connective::Iconnector::request_connect(end_point_type _endpoint_remote, end_point_type _endpoint_bind)
+namespace CGDK
 {
-	sSOCKET_CONNECT_REQUEST_PARAMETER parameter;
-	parameter.remote_endpoint = _endpoint_remote;
-	parameter.bind_endpoint = _endpoint_bind;
+	inline object_ptr<net::io::Iconnectable> net::io::connective::Iconnector::request_connect(end_point_type _endpoint_remote, end_point_type _endpoint_bind)
+	{
+		sSOCKET_CONNECT_REQUEST_PARAMETER parameter;
+		parameter.remote_endpoint = _endpoint_remote;
+		parameter.bind_endpoint = _endpoint_bind;
 
-	context context_connect{ buffer_view((char*)&parameter, sizeof(parameter)) };
-	return this->request_connect(context_connect);
-}
-inline bool CGDK::net::io::connective::Iconnector::request_connect(Iconnectable* _pconnectable, end_point_type _endpoint_remote, end_point_type _endpoint_bind)
-{
-	sSOCKET_CONNECT_REQUEST_PARAMETER parameter;
-	parameter.remote_endpoint = _endpoint_remote;
-	parameter.bind_endpoint = _endpoint_bind;
+		context context_connect{ buffer_view((char*)&parameter, sizeof(parameter)) };
+		return this->request_connect(context_connect);
+	}
+	inline bool net::io::connective::Iconnector::request_connect(Iconnectable* _pconnectable, end_point_type _endpoint_remote, end_point_type _endpoint_bind)
+	{
+		sSOCKET_CONNECT_REQUEST_PARAMETER parameter;
+		parameter.remote_endpoint = _endpoint_remote;
+		parameter.bind_endpoint = _endpoint_bind;
 
-	context context_connect{ buffer_view((char*)&parameter, sizeof(parameter)) };
-	return this->process_connecting(_pconnectable, context_connect);
+		context context_connect{ buffer_view((char*)&parameter, sizeof(parameter)) };
+		return this->process_connecting(_pconnectable, context_connect);
+	}
+
+	sSOCKET_CONNECT_REQUEST_PARAMETER get_parameter_connection(const context& _context, bool _enable_progress_log = true);
 }

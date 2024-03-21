@@ -39,8 +39,6 @@ IF (NOT DEFINED CMAKE_BULD_TYPE)
 ENDIF()
 
 # 5) directories
-SET ( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../../../lib/cgdk/sdk10 )
-SET ( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../../../lib/cgdk/sdk10 )
 SET ( CMAKE_RUNTIME_OTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} )
 SET ( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR} )
 
@@ -59,7 +57,7 @@ INCLUDE_DIRECTORIES(
 
 # 8) library directories
 LINK_DIRECTORIES(
-	${CMAKE_CURRENT_SOURCE_DIR}/../../../lib/cgdk/sdk10
+	${CMAKE_CURRENT_SOURCE_DIR}/../../../lib/cgdk/sdk10/${DIST}
 )
 
 
@@ -97,9 +95,9 @@ ADD_EXECUTABLE(${PROJECT_NAME}.${BUILD_TYPE} ${SRC_FILES})
 
 # 4) link
 TARGET_LINK_LIBRARIES( ${PROJECT_NAME}.${BUILD_TYPE}
-	CGDK10.server.system.service_linux.${BUILD_TYPE}
-	CGDK10.server.system.time_event_linux.${BUILD_TYPE}
-	CGDK10.server.system.log_linux.${BUILD_TYPE}
+	CGDK10.server.service_linux.${BUILD_TYPE}
+	CGDK10.server.time_event_linux.${BUILD_TYPE}
+	CGDK10.server.log_linux.${BUILD_TYPE}
 	CGDK10.net.socket_linux.${BUILD_TYPE}
 	CGDK10.system.object_linux.${BUILD_TYPE}
 	rt

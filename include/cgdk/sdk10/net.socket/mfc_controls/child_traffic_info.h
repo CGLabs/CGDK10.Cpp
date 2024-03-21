@@ -72,7 +72,6 @@ protected:
 			uint64_t			m_count_send_io_call;
 			uint64_t			m_count_receive_io_call;
 
-
 			CStatic_graph		m_graph_traffic;
 			CSliderCtrl			m_slider_scale_traffic;
 

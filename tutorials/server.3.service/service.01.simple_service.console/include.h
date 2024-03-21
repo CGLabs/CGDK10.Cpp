@@ -1,5 +1,5 @@
-﻿#include "cgdk/sdk10/server.system.log.h"
-#include "cgdk/sdk10/server.system.service.h"
+﻿#include "cgdk/sdk10/server.log.h"
+#include "cgdk/sdk10/server.service.h"
 #include "cgdk/sdk10/net.socket.h"
 
 #include <iostream>

@@ -57,7 +57,7 @@ INCLUDE_DIRECTORIES(
 
 # 8) library directories
 LINK_DIRECTORIES(
-	${CMAKE_CURRENT_SOURCE_DIR}/../../../../lib/cgdk/sdk10
+	${CMAKE_CURRENT_SOURCE_DIR}/../../../../lib/cgdk/sdk10/${DIST}
 )
 
 

@@ -135,9 +135,9 @@ private:
 			object_ptr<executable_receiving> m_pexecutable_receiving;
 			object_ptr<executable_received>	m_pexecutable_received;
 
-			WSABUF				m_wsabuf_receiving;	// receive를 걸어 놓은 buffer...
-			DWORD				m_wsa_bytes_received = 0;
-			DWORD				m_wsa_flag = 0;
+			WSABUF				m_wsabuf_receiving{ 0,0 };	// receive를 걸어 놓은 buffer...
+			DWORD				m_wsa_bytes_received{ 0 };
+			DWORD				m_wsa_flag{ 0 };
 		#elif defined(_SYS_EPOLL_H)
 		#endif
 };

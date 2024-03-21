@@ -85,7 +85,7 @@ result_code socket_web::on_message(sMESSAGE_HTTP_REQUEST& _msg)
 		msg_http_response.contents.push_back(make_shared_buffer(text("<html><body><h1>hellow CGCII</h1></body></html>\r\n"sv)));
 	}
 
-	send(make_shared_buffer(msg_http_response));
+	this->send(make_shared_buffer(msg_http_response));
 
 	// return) 
 	return eRESULT::DONE;

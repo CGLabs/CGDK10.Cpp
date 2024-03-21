@@ -4,6 +4,7 @@
 // All rights reserved.
 //
 // For the license information refer to format.h.
+#ifdef FMT_FORMAT_H_
 
 #if defined(_MSC_VER)
     #pragma warning(disable:26812)
@@ -70,3 +71,5 @@ template FMT_API wchar_t detail::decimal_point_impl(locale_ref);
 template FMT_API void detail::buffer<wchar_t>::append(const wchar_t*,
                                                       const wchar_t*);
 FMT_END_NAMESPACE
+
+#endif

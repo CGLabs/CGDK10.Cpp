@@ -64,10 +64,11 @@ template <class T, class TFUNCTION, class... TARGS>
 static	std::enable_if_t<std::is_base_of_v<Ireferenceable, std::remove_pointer_t<std::decay_t<T>>>&& std::is_member_function_pointer_v<TFUNCTION>, object_ptr<Iexecutable>>
 make_executable(T* _this, TFUNCTION _fucntion, TARGS&&... _args)
 {
+	object_ptr<T> hold_this(_this);
 	return make_executable([=]()
 		{
 			// - call function
-			(_this->*_fucntion)(std::forward<TARGS>(_args)...);
+			(hold_this->*_fucntion)(std::forward<TARGS>(_args)...);
 		});
 }
 template <class T, class TFUNCTION, class... TARGS>

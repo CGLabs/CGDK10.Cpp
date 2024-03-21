@@ -136,10 +136,10 @@ namespace CGDK
 		#if WDK_NTDDI_VERSION >= NTDDI_WIN10
 			#ifdef NDEBUG
 				#pragma message("[CGDK10] 'CGDK10.system.mfc_controls_Windows10.0_x64_Release_Dynamic.lib' will be linked")
-				#pragma comment(lib, "cgdk/sdk10/CGDK10.system.mfc_controls_Windows10.0_x64_Release_Dynamic.lib")
+				#pragma comment(lib, "cgdk/sdk10/windows/CGDK10.system.mfc_controls_Windows10.0_x64_Release_Dynamic.lib")
 			#else
 				#pragma message("[CGDK10] 'CGDK10.system.mfc_controls_Windows10.0_x64_Debug_Dynamic.lib' will be linked")
-				#pragma comment(lib, "cgdk/sdk10/CGDK10.system.mfc_controls_Windows10.0_x64_Debug_Dynamic.lib")
+				#pragma comment(lib, "cgdk/sdk10/windows/CGDK10.system.mfc_controls_Windows10.0_x64_Debug_Dynamic.lib")
 			#endif
 		// Error - No supported
 		#else

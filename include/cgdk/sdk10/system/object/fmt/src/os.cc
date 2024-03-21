@@ -4,6 +4,7 @@
 // All rights reserved.
 //
 // For the license information refer to format.h.
+#ifdef FMT_FORMAT_H_
 
 // Disable bogus MSVC warnings.
 #if !defined(_CRT_SECURE_NO_WARNINGS) && defined(_MSC_VER)
@@ -323,3 +324,5 @@ void ostream::grow(size_t) {
 }
 #endif  // FMT_USE_FCNTL
 FMT_END_NAMESPACE
+
+#endif

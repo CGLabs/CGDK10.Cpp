@@ -67,7 +67,7 @@ namespace CGDK
 //----------------------------------------------------------------------------
 // 1) CGDK base header files
 #include "cgdk/sdk10/net.socket.http.h"
-#include "cgdk/sdk10/server.system.group.h"
+#include "cgdk/sdk10/server.group.h"
 
 // 2) filesystem
 #include <filesystem>
@@ -149,10 +149,10 @@ namespace CGDK
 		#if WDK_NTDDI_VERSION >= NTDDI_WIN10
 			#ifdef NDEBUG
 				#pragma message("[CGDK10] 'CGDK10.server.web_Windows10.0_x64_Release.lib' will be linked")
-				#pragma comment(lib,"cgdk/sdk10/CGDK10.server.web_Windows10.0_x64_Release.lib")
+				#pragma comment(lib,"cgdk/sdk10/windows/CGDK10.server.web_Windows10.0_x64_Release.lib")
 			#else
 				#pragma message("[CGDK10] 'CGDK10.server.web_Windows10.0_x64_Debug.lib' will be linked")
-				#pragma comment(lib,"cgdk/sdk10/CGDK10.server.web_Windows10.0_x64_Debug.lib")
+				#pragma comment(lib,"cgdk/sdk10/windows/CGDK10.server.web_Windows10.0_x64_Debug.lib")
 			#endif
 		// Error - No supported
 		#else

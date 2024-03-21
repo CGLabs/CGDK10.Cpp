@@ -169,10 +169,10 @@ namespace CGDK::query::rdb
 		#if WDK_NTDDI_VERSION >= NTDDI_WIN10
 			#ifdef NDEBUG
 				#pragma message("[CGDK10] 'CGDK10.server.query.rdb.oledb_Windows10.0_x64_Release.lib' will be linked")
-				#pragma comment(lib, "cgdk/sdk10/CGDK10.server.query.rdb.oledb_Windows10.0_x64_Release.lib")
+				#pragma comment(lib, "cgdk/sdk10/windows/CGDK10.server.query.rdb.oledb_Windows10.0_x64_Release.lib")
 			#else
 				#pragma message("[CGDK10] 'CGDK10.server.query.rdb.oledb_Windows10.0_x64_Debug.lib' will be linked")
-				#pragma comment(lib, "cgdk/sdk10/CGDK10.server.query.rdb.oledb_Windows10.0_x64_Debug.lib")
+				#pragma comment(lib, "cgdk/sdk10/windows/CGDK10.server.query.rdb.oledb_Windows10.0_x64_Debug.lib")
 			#endif
 		// Error - No supported
 		#else

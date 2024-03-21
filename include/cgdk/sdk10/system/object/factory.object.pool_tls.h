@@ -603,7 +603,10 @@ TOBJECT* factory::object_pool_tls<TOBJECT>::alloc(CGNEW_DEBUG_INFO_PARAMETERS)
 	// debug)
 	CGNEW_DEBUG_INFO_SET(pobject, _filename, _line);
 
-	// 3) call 'process_on_pool_alloc'
+	// 3) set null
+	pobject->Next = nullptr;
+
+	// 4) call 'process_on_pool_alloc'
 	this->template process_on_alloc<TOBJECT>(pobject);
 
 	// return)
@@ -672,6 +675,9 @@ void factory::object_pool_tls<TOBJECT>::dealloc(TOBJECT* _pobject) noexcept
 
 	// check)
 	CGASSERT_ERROR(_pobject->reference_count() == 0);
+
+	// check)
+	CGASSERT_ERROR(_pobject->Next == nullptr);
 
 	// 1) call 'process_on_pool_dealloc'
 	this->template process_on_dealloc<TOBJECT>(_pobject);

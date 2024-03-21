@@ -41,21 +41,21 @@ public:
 	virtual	~function() noexcept {}
 
 public:
-			void				set_function(TEXECUTE&& _function) noexcept { scoped_lock(m_lockable_completion) { m_function_completion = std::move(_function); } }
-			void				set_function(const TEXECUTE& _function) noexcept { scoped_lock(m_lockable_completion) { m_function_completion = _function; } }
-	[[nodiscard]] TEXECUTE		get_function() const noexcept { scoped_lock(m_lockable_completion) { return m_function_completion; } }
+			void				set_function(const TEXECUTE& _fucntion) noexcept { scoped_lock(this->m_lockable_completion) { this->m_function_completion = _fucntion; } }
+			void				set_function(TEXECUTE&& _fucntion) noexcept { scoped_lock(this->m_lockable_completion) { this->m_function_completion = std::move(_fucntion); } }
+	[[nodiscard]] TEXECUTE		get_function() const noexcept { scoped_lock(this->m_lockable_completion) { return this->m_function_completion; } }
 
 private:
 			lockable<>			m_lockable_completion;
 			TEXECUTE			m_function_completion;
 private:
-	virtual	intptr_t			process_execute(intptr_t, size_t) override { return process_execute_result<decltype(m_function_completion())>();}
+	virtual	intptr_t			process_execute(intptr_t, size_t) override { return this->process_execute_result<decltype(this->m_function_completion())>();}
 			template<class TRETURN>
 			std::enable_if_t<std::is_void<TRETURN>::value, intptr_t>
-								process_execute_result() { m_function_completion(); return intptr_t(0);}
+								process_execute_result() { this->m_function_completion(); return intptr_t(0);}
 			template<class TRETURN>
 			std::enable_if_t<!std::is_void<TRETURN>::value, intptr_t>
-								process_execute_result() { return static_cast<intptr_t>(m_function_completion());}
+								process_execute_result() { return static_cast<intptr_t>(this->m_function_completion());}
 };
 
 

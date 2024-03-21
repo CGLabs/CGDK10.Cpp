@@ -21,10 +21,10 @@
 //-----------------------------------------------------------------
 // 1) CGCII 
 #include "cgdk/sdk10/net.socket.h"
-#include "cgdk/sdk10/server.system.time_event.h"
-#include "cgdk/sdk10/server.system.log.h"
-#include "cgdk/sdk10/server.system.service.h"
-#include "cgdk/sdk10/server.system.group.h"
+#include "cgdk/sdk10/server.time_event.h"
+#include "cgdk/sdk10/server.log.h"
+#include "cgdk/sdk10/server.service.h"
+#include "cgdk/sdk10/server.group.h"
 
 using namespace CGDK;
 

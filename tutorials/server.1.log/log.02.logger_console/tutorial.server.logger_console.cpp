@@ -1,4 +1,4 @@
-﻿#include "cgdk/sdk10/server.system.log.h"
+﻿#include "cgdk/sdk10/server.log.h"
 
 #include <iostream>
 #if defined(_WIN32)

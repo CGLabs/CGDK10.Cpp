@@ -40,8 +40,14 @@ CMAKE_POLICY( VERSION 3.20 )
 # 1) tcp echo server - CGCII
 ADD_SUBDIRECTORY (console)
 
+FIND_PACKAGE(Boost 1.71.0)
+IF(Boost_FOUND)
+
 # 2) tcp echo server - boost.asio
 ADD_SUBDIRECTORY (console.asio)
 
 # 3) tcp echo server - boost.asio.ex
 ADD_SUBDIRECTORY (console.asio.ex)
+
+ENDIF(Boost_FOUND)
+
